@@ -86,7 +86,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/nabilibrahim101
-    - icon: fontawesome/brands/globe
+    - icon: fontawesome/solid/globe
       link: https://flowlence.com
 
 copyright: Copyright &copy; 2025-2026 Flowlence
