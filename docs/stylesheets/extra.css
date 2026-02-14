@@ -52,6 +52,12 @@
 .md-tabs__link--active,
 .md-tabs__link:hover {
   color: #F7862F;
+  opacity: 1;
+}
+
+/* Fix: override Material's default white color on active tabs */
+.md-tabs__link[data-md-state="active"] {
+  color: #F7862F;
 }
 
 [data-md-color-scheme="slate"] .md-tabs__link {
