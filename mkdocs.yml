@@ -28,6 +28,8 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.footer
+    - navigation.path
+    - toc.integrate
     - search.suggest
     - search.highlight
     - content.code.copy
