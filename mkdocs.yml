@@ -6,8 +6,8 @@ site_author: Flowlence
 theme:
   name: material
   custom_dir: overrides
-  logo: images/logo.png
-  favicon: images/favicon.png
+  # logo: images/logo.png       # Uncomment when you add a logo file
+  # favicon: images/favicon.png # Uncomment when you add a favicon file
   palette:
     - scheme: default
       primary: custom
@@ -22,8 +22,10 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
-    - navigation.expand
+    - navigation.indexes
     - navigation.top
     - navigation.footer
     - search.suggest
@@ -61,7 +63,7 @@ nav:
     - Interface Tour: getting-started/interface.md
     - Your First Program: getting-started/first-program.md
   - Sensors & Modules:
-    - Overview: sensors/index.md
+    - sensors/index.md
     - LED: sensors/led.md
     - Button: sensors/button.md
     - Buzzer: sensors/buzzer.md
@@ -75,7 +77,7 @@ nav:
     - LCD Display: sensors/lcd.md
     - Relay Module: sensors/relay.md
   - Projects:
-    - Overview: projects/index.md
+    - projects/index.md
     - Smart Lighting System: projects/smart-lighting.md
     - Alarm System: projects/alarm-system.md
     - Weather Station: projects/weather-station.md
