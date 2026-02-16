@@ -45,19 +45,20 @@
   border-bottom: 1px solid #404040;
 }
 
+/* Override the white text variable used by tabs */
+.md-tabs {
+  --md-primary-bg-color: #555555;
+}
+
 .md-tabs__link {
-  color: #555555;
+  color: #555555 !important;
+  opacity: 1 !important;
 }
 
 .md-tabs__link--active,
 .md-tabs__link:hover {
-  color: #F7862F;
-  opacity: 1;
-}
-
-/* Fix: override Material's default white color on active tabs */
-.md-tabs__link[data-md-state="active"] {
-  color: #F7862F;
+  color: #F7862F !important;
+  opacity: 1 !important;
 }
 
 [data-md-color-scheme="slate"] .md-tabs__link {
