@@ -1,0 +1,91 @@
+:root {
+  --md-primary-fg-color: #F7862F;
+  --md-primary-fg-color--light: #F9A443;
+  --md-primary-fg-color--dark: #E0792B;
+  --md-accent-fg-color: #E8508A;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #F7862F;
+  --md-primary-fg-color--light: #F9A443;
+  --md-primary-fg-color--dark: #E0792B;
+  --md-accent-fg-color: #E8508A;
+}
+
+/* White header with subtle border */
+.md-header {
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Header title and links */
+.md-header__title {
+  color: #333333;
+  font-weight: 700;
+}
+
+[data-md-color-scheme="slate"] .md-header__title {
+  color: #ffffff;
+}
+
+/* Header nav links (tabs) */
+.md-tabs {
+  background-color: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #2b2b2b;
+  border-bottom: 1px solid #404040;
+}
+
+/* Override the white text variable used by tabs */
+.md-tabs {
+  --md-primary-bg-color: #555555;
+}
+
+.md-tabs__link {
+  color: #555555 !important;
+  opacity: 1 !important;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: #F7862F !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: #aaaaaa;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link--active,
+[data-md-color-scheme="slate"] .md-tabs__link:hover {
+  color: #F9A443;
+}
+
+/* Search bar styling for white header */
+.md-search__input {
+  background-color: #f0f0f0;
+  color: #333333;
+}
+
+[data-md-color-scheme="slate"] .md-search__input {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Header icons (search, dark mode toggle) */
+.md-header .md-icon {
+  color: #555555;
+}
+
+[data-md-color-scheme="slate"] .md-header .md-icon {
+  color: #cccccc;
+}
