@@ -2,7 +2,7 @@
 
 This guide will walk you through the main areas of the Flowlence Code interface.
 
-![Interface Overview](../images/placeholder-interface.png)
+![Interface Overview](../images/placeholder.svg)
 
 ## Main Areas
 

@@ -1,6 +1,6 @@
 site_name: Flowlence Learn
 site_url: https://learn.flowlence.com
-site_description: Tutorials and guides for Flowlence Code - Block-based coding for IoT and Robotics
+site_description: Tutorials and guides for Flowlence Code - Block-based coding for the Brilliant IoT Smart City Workshop
 site_author: Flowlence
 
 theme:
@@ -58,33 +58,55 @@ markdown_extensions:
   - toc:
       permalink: true
 
+# Project-first navigation: each Part is one workshop project.
+# Within each project, components are introduced first, then the build capstone ties them together.
+# This mirrors how the workshop coach guides students: learn the pieces, then build the system.
 nav:
   - Home: index.md
-  - Getting Started:
-    - Download & Install: getting-started/install.md
-    - Interface Tour: getting-started/interface.md
+
+  - Part 1 · Getting Started:
+    - getting-started/index.md
+    - What is IoT & a Smart City?: getting-started/what-is-iot.md
+    - Meet Your Kit: getting-started/meet-your-kit.md
+    - Install Flowlence Code: getting-started/install.md
+    - Tour the Interface: getting-started/interface.md
+    - How Blocks Work: getting-started/block-basics.md
+    - Pin Map & Shield Layout: getting-started/pin-map.md
     - Your First Program: getting-started/first-program.md
-  - Sensors & Modules:
-    - sensors/index.md
-    - LED: sensors/led.md
-    - Button: sensors/button.md
-    - Buzzer: sensors/buzzer.md
-    - Servo Motor: sensors/servo.md
-    - Ultrasonic Sensor: sensors/ultrasonic.md
-    - Temperature & Humidity (DHT11): sensors/dht11.md
-    - Light Sensor (LDR): sensors/ldr.md
-    - PIR Motion Sensor: sensors/pir.md
-    - Soil Moisture Sensor: sensors/soil-moisture.md
-    - Water Level Sensor: sensors/water-level.md
-    - LCD Display: sensors/lcd.md
-    - Relay Module: sensors/relay.md
-  - Projects:
-    - projects/index.md
-    - Smart Lighting System: projects/smart-lighting.md
-    - Alarm System: projects/alarm-system.md
-    - Weather Station: projects/weather-station.md
-    - Auto Plant Watering: projects/auto-watering.md
-    - IoT Dashboard: projects/iot-dashboard.md
+
+  - Part 2 · Smart Agriculture:
+    - projects/agriculture/index.md
+    - White LED: projects/agriculture/led.md
+    - Soil Moisture Probe: projects/agriculture/soil-moisture.md
+    - Water Level Detector: projects/agriculture/water-level.md
+    - Water Pump (with Relay): projects/agriculture/water-pump.md
+    - Build the Smart Agriculture System: projects/agriculture/build.md
+
+  - Part 3 · Smart Parking:
+    - projects/parking/index.md
+    - Distance Sensor (Ultrasonic): projects/parking/ultrasonic.md
+    - Servo Motor: projects/parking/servo.md
+    - RFID Reader: projects/parking/rfid.md
+    - Build the Smart Parking System: projects/parking/build.md
+
+  - Part 4 · Smart Safety:
+    - projects/safety/index.md
+    - Fire Detector: projects/safety/fire-detector.md
+    - Gas Leak Sensor: projects/safety/gas-leak.md
+    - Active Buzzer: projects/safety/active-buzzer.md
+    - Build the Smart Safety System: projects/safety/build.md
+
+  - Part 5 · Smart Temperature:
+    - projects/temperature/index.md
+    - Temperature & Humidity (DHT11): projects/temperature/dht11.md
+    - DC Motor (Fan): projects/temperature/dc-motor.md
+    - LCD Display: projects/temperature/lcd.md
+    - Build the Smart Temperature System: projects/temperature/build.md
+
+  - Reference:
+    - reference/index.md
+    - Glossary: reference/glossary.md
+    - Troubleshooting: reference/troubleshooting.md
 
 extra:
   social:
