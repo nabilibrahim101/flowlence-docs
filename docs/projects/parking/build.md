@@ -22,7 +22,7 @@ In a real lot, you'd have many spots and many gates — your prototype is one of
 
 ## Components needed
 
-All from your Flowlence IoT Kit.
+All from your Brilliant Smart City Kit.
 
 | Component | Quantity |
 |-----------|----------|

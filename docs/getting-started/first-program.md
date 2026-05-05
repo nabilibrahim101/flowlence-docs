@@ -11,7 +11,7 @@ In this lesson, you'll wire up the **White LED module** from your kit and write 
 
 ## What you need
 
-From your Flowlence IoT Kit:
+From your Brilliant Smart City Kit:
 
 - **ESP32 Plus** board (×1)
 - **White LED module** (×1) — small board with G/V/S header, the LED already mounted

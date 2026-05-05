@@ -1,7 +1,7 @@
 # Alarm System
 
 !!! warning "This project was redesigned to match your kit"
-    The original design used a PIR motion sensor, which is **not** in the Flowlence IoT Kit. This project now uses the **Fire Detector** as the trigger — a more directly smart-city-relevant safety sensor. The full step-by-step content is still being rewritten; the overview and components below match the new design.
+    The original design used a PIR motion sensor, which is **not** in the Brilliant Smart City Kit. This project now uses the **Fire Detector** as the trigger — a more directly smart-city-relevant safety sensor. The full step-by-step content is still being rewritten; the overview and components below match the new design.
 
 ## Overview
 
@@ -11,7 +11,7 @@ Build a fire-alarm safety system. When the Fire Detector sees an open flame, the
 
 ## Components needed
 
-All components are in your Flowlence IoT Kit.
+All components are in your Brilliant Smart City Kit.
 
 | Component | Quantity | From your kit |
 |-----------|----------|---------------|

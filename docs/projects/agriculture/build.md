@@ -22,7 +22,7 @@ So the decision logic uses two sensors at once before running the pump. The LED 
 
 ## Components needed
 
-All from your Flowlence IoT Kit.
+All from your Brilliant Smart City Kit.
 
 | Component | Quantity |
 |-----------|----------|

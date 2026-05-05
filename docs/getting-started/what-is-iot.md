@@ -1,8 +1,5 @@
 # What is IoT & a Smart City?
 
-!!! note "Authoring note (remove before publishing)"
-    This page is the handoff between the STEM curriculum and the Flowlence Code technical tutorial. It answers *"why am I learning this?"* before the student touches hardware. Sections marked with TODO should be filled in by RVP's STEM team.
-
 ## The Internet of Things (IoT), in plain words
 
 An **IoT device** is any physical thing — a lamp, a sensor, a watering pump — that can sense, decide, and act, often connected to a network. A smart streetlight that dims itself at midnight is an IoT device. A soil-moisture sensor that tells a farmer's phone when to water the crops is an IoT device.
@@ -20,7 +17,22 @@ This is the loop you'll use in every project: **Sensor → Data → Decision →
 
 ## What is a Smart City?
 
-*(To be written by RVP STEM curriculum team. This section should introduce smart-city concepts, sustainability, urban planning, and connect to the Brilliant Global Competition judging framework.)*
+A **Smart City** is a city that uses data and technology to make life better for the people who live in it. The streetlight that dims when no one is around to save energy, the traffic light that gives more green time when an ambulance is approaching, the water meter that warns the city about a leak before the street floods — these are all *smart-city* technologies. Each one is built from the same simple loop you just read: **sensor → data → decision → action**, multiplied across thousands of devices and one good plan.
+
+The world's biggest cities are already running on these systems. By 2030, the UN estimates that **two-thirds of humanity will live in cities** — and that growth makes smart-city thinking less of a "nice to have" and more of a survival skill for the next generation of leaders, engineers, and designers.
+
+That's where **you** come in.
+
+The **Brilliant Global Competition** challenges students like you to design and build a smart-city model that solves a real urban problem. You'll be judged on four dimensions:
+
+- **Sustainability** — does your city use water, energy, and materials wisely?
+- **Mobility** — does it move people and goods safely and efficiently?
+- **Protection** — does it keep its residents safe from fire, gas, and emergencies?
+- **Comfort** — does it create healthy, comfortable, livable spaces?
+
+These four pillars are not arbitrary. They map directly to how real cities — Toronto, Singapore, Dubai, Songdo — measure their own progress. The judges aren't asking you to imagine the future; they're asking you to *prototype* it on a piece of MDF, with real sensors, in real working code.
+
+This tutorial is the technology half of that work. Your STEM teacher leads the urban-design and presentation half. Together, the two halves equal a competition entry that doesn't just *describe* a smart city — it *runs* one.
 
 ## The four smart-city pillars
 

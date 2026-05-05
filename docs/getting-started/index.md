@@ -1,6 +1,6 @@
 # Part 1 · Getting Started
 
-Welcome! In this part you will understand **what you're about to build and why**, meet the hardware in your Flowlence IoT Kit, install Flowlence Code, and run your very first program on the ESP32.
+Welcome! In this part you will understand **what you're about to build and why**, meet the hardware in your Brilliant Smart City Kit, install Flowlence Code, and run your very first program on the ESP32.
 
 By the end of Part 1 you will:
 

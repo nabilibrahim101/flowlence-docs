@@ -25,7 +25,7 @@ Once this is working, **Part 4** will show you how to send those same readings t
 
 ## Components needed
 
-Everything on this list is in your Flowlence IoT Kit — no breadboard or extra wires needed.
+Everything on this list is in your Brilliant Smart City Kit — no breadboard or extra wires needed.
 
 | Component | Quantity | From your kit |
 |-----------|----------|---------------|

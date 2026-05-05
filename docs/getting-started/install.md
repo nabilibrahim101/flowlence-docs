@@ -3,17 +3,20 @@
 ## System requirements
 
 - **Operating System:** Windows 10 or later
-- **RAM:** 4 GB minimum (8 GB recommended)
-- **Disk space:** 2 GB free
+- **RAM:** 8 GB minimum (16 GB recommended)
+- **Disk space:** 8 GB free
 - **USB port:** one free port for the ESP32
 
 ## Download
 
-Download the latest version of Flowlence Code from the official website:
+Click below to download the latest Windows version directly. The download starts as soon as you click — no extra page in between.
 
-[:material-download: Download Flowlence Code](https://flowlence.com/code-cloud.html){ .md-button .md-button--primary }
+[:material-download: Download Flowlence Code (Windows x64)](https://github.com/nabilibrahim101/flowlence-desktop/releases/latest/download/Flowlence_Code_win_x64.exe){ .md-button .md-button--primary }
 
-You'll get an installer file named something like `Flowlence_Code_v1.0.2_win_x64.exe`.
+You'll get an installer file named **`Flowlence_Code_win_x64.exe`** (≈1.5 GB — large because the kit's full toolchain ships inside, so you're only one download away from being able to build any project in this tutorial).
+
+!!! tip "On a different platform?"
+    Flowlence Code is Windows-only at the moment. Mac and Linux builds are on the roadmap. If you're on a Mac or Linux machine, your STEM teacher can help you find a Windows machine for the workshop.
 
 ## Step 1 · Run the installer
 

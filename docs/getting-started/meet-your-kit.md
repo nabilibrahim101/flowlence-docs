@@ -1,10 +1,12 @@
 # Meet Your Kit
 
-Your Flowlence IoT Kit contains **everything you need** to build the four smart-city projects in this tutorial — no breadboard, no soldering, no extra parts to buy. Every sensor ships on a small breakout board with a **3-pin Dupont cable** that plugs straight into the **ESP32 Plus shield**.
+Your **Brilliant Smart City Kit** contains everything you need to build the four smart-city projects in this tutorial — no breadboard, no soldering, no extra parts to buy. Every sensor ships on a small breakout board with a Dupont cable that plugs straight into the **ESP32 Plus shield** — most modules use a **3-pin** cable (Ground / Voltage / Signal); the I²C modules (LCD Display, RFID Reader) use a **4-pin** cable that adds the SCL clock line.
+
+![Brilliant Smart City Kit — the official box, powered by Flowlence and the BGC](../images/getting-started/brilliant-smart-city-kit.png){ width="420" }
 
 ## The ESP32 Plus: your city's brain
 
-Every project in this tutorial revolves around the **ESP32 Plus** board. It's a standard ESP32 microcontroller mounted on a shield that exposes every pin as a labelled **G / V / S** (Ground / Voltage / Signal) header — which means **you never need a breadboard**. You plug the 3-pin cable from any sensor straight into the pin number the tutorial tells you to use.
+Every project in this tutorial revolves around the **ESP32 Plus** board. It's a standard ESP32 microcontroller mounted on a shield that exposes every pin as a labelled **G / V / S** (Ground / Voltage / Signal) header — which means **you never need a breadboard**. You plug the Dupont cable from any sensor straight into the pin number the tutorial tells you to use.
 
 ![ESP32 Plus board](../images/getting-started/esp32-plus.png){ width="320" }
 
@@ -60,7 +62,7 @@ These are the components you'll use across the four projects, grouped by smart-c
 
 | Component | What it does |
 |-----------|--------------|
-| **Fire Detector** | Senses the infrared light produced by an open flame (the kit's "smoke sensor") |
+| **Fire Detector** | Senses the infrared light produced by an open flame |
 | **Gas Leak Sensor** | Detects combustible gases like LPG and propane |
 | **Active Buzzer** | Makes the loud alarm sound when triggered |
 
@@ -76,15 +78,14 @@ These are the components you'll use across the four projects, grouped by smart-c
 
 | Item | Use |
 |------|-----|
-| **3-pin Dupont cables** | Connect each sensor module to the ESP32 Plus |
+| **Dupont cables (3-pin and 4-pin)** | Connect each sensor module to the ESP32 Plus — 3-pin for most modules, 4-pin for the I²C ones (LCD, RFID Reader) |
 | **USB-C cable** | Power and program the ESP32 from your computer |
-| **AA Battery Holder** | Optional — power the ESP32 standalone for portable demos |
 
 ## Taking care of your kit
 
 !!! warning "Before you plug anything in"
     - **Always disconnect the USB cable** before connecting or moving a sensor cable.
-    - The 3-pin Dupont cables have a **keyed connector** — they only fit one way. If it doesn't slide on easily, you're trying it backwards or offset by a pin.
+    - The Dupont cables have a **keyed connector** — they only fit one way. If it doesn't slide on easily, you're trying it backwards or offset by a pin.
     - Components are reusable — handle them gently and return them to the kit between sessions.
 
 !!! danger "Sensors that need extra care"

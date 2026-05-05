@@ -1,6 +1,10 @@
 # Welcome to Flowlence Learn
 
-You're about to build a **smart city in miniature**. Over four hands-on projects you'll create:
+You're about to build the technology that powers a **smart city** — and we encourage you to bring it to life by constructing a model city like the one below, with each of your projects sitting in its own neighbourhood.
+
+![A student-built smart city model with four zones — agriculture, parking, safety, and climate — each wired to the ESP32 Plus and the Brilliant Smart City Kit](images/city-model.png)
+
+Over four hands-on projects you'll create:
 
 - 🌿 A self-watering plant system that knows when the soil is thirsty
 - 🚦 A smart parking spot with automated gate access
@@ -8,8 +12,6 @@ You're about to build a **smart city in miniature**. Over four hands-on projects
 - 🌡️ A climate-control system that turns a fan on automatically
 
 Every one of these is a real piece of technology that runs in real cities, scaled down to fit on your desk. You'll do it all with **Flowlence Code** — colourful blocks you drag and snap together, no typing required.
-
-![Flowlence Code in action](images/placeholder.svg)
 
 ## Why you're here
 
@@ -65,7 +67,7 @@ Each project maps to one of the four pillars that define real smart cities:
 ## What you'll need
 
 - **Flowlence Code** — free download, installed on your computer ([Install guide](getting-started/install.md))
-- **Flowlence IoT Kit** — ESP32 Plus board + the workshop sensors and modules ([Meet your kit](getting-started/meet-your-kit.md))
+- **Brilliant Smart City Kit** — ESP32 Plus board + the workshop sensors and modules ([Meet your kit](getting-started/meet-your-kit.md))
 - **A computer** — Windows 10 or later with a free USB port
 - **About 10 hours** — realistic time for a student working through Part 1 → Part 5
 
