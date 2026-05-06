@@ -42,6 +42,7 @@ extra_css:
   - stylesheets/tokens.css
   - stylesheets/chrome.css
   - stylesheets/home.css
+  - stylesheets/pillars.css
   - stylesheets/extra.css
 
 extra_javascript:

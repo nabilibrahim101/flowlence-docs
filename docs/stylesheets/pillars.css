@@ -1,0 +1,63 @@
+/* ===================================================================
+   pillars.css — Per-pillar accents (5 redundant signals)
+   Spec ref: §7
+   Activates when <body data-pillar="..."> is set; falls back gracefully.
+   =================================================================== */
+
+/* ---------- 1. Nav tab (active project gets pillar color) ---------- */
+body[data-pillar] .md-tabs__link--active {
+  color: var(--pillar) !important;
+  border-bottom: 2px solid var(--pillar);
+  padding-bottom: 0.2rem;
+}
+
+/* ---------- 2. Breadcrumb (final segment uses pillar color) ---------- */
+/* MkDocs Material doesn't render breadcrumbs by default — uses .md-nav__path */
+body[data-pillar] .md-nav__path > a:last-of-type,
+body[data-pillar] .md-content__breadcrumb > :last-child {
+  color: var(--pillar);
+  font-weight: 600;
+}
+
+/* ---------- 3. H1 accent bar + pillar eyebrow ---------- */
+body[data-pillar] .md-typeset h1::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 0.85em;
+  background: var(--pillar);
+  border-radius: 2px;
+  margin-right: 0.85rem;
+  vertical-align: -0.05em;
+}
+
+/* ---------- 4. Sidebar TOC: pillar-color left border on active section ---------- */
+body[data-pillar] .md-nav--secondary > .md-nav__list,
+body[data-pillar] .md-sidebar--primary .md-nav__list .md-nav__list {
+  border-left-color: var(--pillar);
+}
+
+body[data-pillar] .md-nav__link--active {
+  color: var(--pillar) !important;
+  font-weight: 600;
+}
+
+/* ---------- 5. Next-up CTA on project pages ---------- */
+body[data-pillar] .md-button.md-button--primary {
+  background-color: var(--pillar) !important;
+  border-color: var(--pillar) !important;
+  color: #fff !important;
+}
+body[data-pillar] .md-button.md-button--primary:hover {
+  filter: brightness(0.95);
+}
+
+/* ---------- Soft pillar tint for stats cards (optional, used on landing pages) ---------- */
+body[data-pillar] .pillar-stats-card {
+  background: var(--pillar-light);
+  border: 1px solid var(--pillar-border);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
