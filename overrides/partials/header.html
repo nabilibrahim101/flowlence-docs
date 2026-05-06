@@ -1,0 +1,60 @@
+{#-
+  Custom header for learn.flowlence.com
+  Renders: bgc mark + divider + Flowlence Learn lockup, then standard Material nav controls.
+  Spec: docs/superpowers/specs/2026-05-06-learn-flowlence-com-redesign-design.md §5.1
+-#}
+{% set class = "md-header" %}
+{% if "navigation.tabs.sticky" in features %}
+  {% set class = class ~ " md-header--shadow md-header--lifted" %}
+{% elif "navigation.tabs" not in features or "toc.integrate" in features or page and page.meta and page.meta.hide and "navigation" in page.meta.hide %}
+  {% set class = class ~ " md-header--shadow" %}
+{% endif %}
+
+<header class="{{ class }}" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+
+    {#- Hamburger (mobile) -#}
+    <label class="md-header__button md-icon" for="__drawer">
+      {% include ".icons/material/menu" ~ ".svg" %}
+    </label>
+
+    {#- Brand lockup: bgc mark + divider + Flowlence Learn -#}
+    <a href="{{ '' | url }}" title="{{ config.site_name | e }}" class="md-header__title flowlence-lockup" data-md-component="header-title">
+      <span class="flowlence-lockup__bgc">bgc</span>
+      <span class="flowlence-lockup__divider" aria-hidden="true"></span>
+      <span class="flowlence-lockup__name">Flowlence Learn</span>
+    </a>
+
+    {#- Search -#}
+    {% if "material/search" in config.plugins %}
+      <label class="md-header__button md-icon" for="__search">
+        {% include ".icons/material/magnify.svg" %}
+      </label>
+      {% include "partials/search.html" %}
+    {% endif %}
+
+    {#- Palette toggle -#}
+    {% if config.theme.palette %}
+      {% if not config.theme.palette is mapping %}
+        {% include "partials/palette.html" %}
+      {% endif %}
+    {% endif %}
+
+    {#- Source repo (if configured) -#}
+    {% if config.repo_url %}
+      <div class="md-header__source">
+        {% include "partials/source.html" %}
+      </div>
+    {% endif %}
+  </nav>
+
+  {#- Ribbon partnership signature -#}
+  <div class="flowlence-ribbon-line" aria-hidden="true"></div>
+
+  {#- Tabs -#}
+  {% if "navigation.tabs.sticky" in features %}
+    {% if "navigation.tabs" in features %}
+      {% include "partials/tabs.html" %}
+    {% endif %}
+  {% endif %}
+</header>
