@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{#- Inject body classes / data-pillar attribute from page front-matter via JS.
+    Material renders <body> in base.html; the cleanest cross-version override is
+    a small inline script that runs as soon as <body> exists. -#}
+{% block libs %}
+  {{ super() }}
+  {% if page and page.meta and (page.meta.body_class or page.meta.pillar) %}
+    <script>
+      (function() {
+        {% if page.meta.body_class %}
+          document.body.classList.add("{{ page.meta.body_class | e }}");
+        {% endif %}
+        {% if page.meta.pillar %}
+          document.body.setAttribute("data-pillar", "{{ page.meta.pillar | e }}");
+        {% endif %}
+      })();
+    </script>
+  {% endif %}
+{% endblock %}

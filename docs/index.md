@@ -1,17 +1,39 @@
+---
+body_class: flowlence-home
+---
+
 # Welcome to Flowlence Learn
 
-You're about to build the technology that powers a **smart city** — and we encourage you to bring it to life by constructing a model city like the one below, with each of your projects sitting in its own neighbourhood.
+<div class="flowlence-hero" markdown>
+<div class="flowlence-hero__grid" markdown>
+<div markdown>
 
-![A student-built smart city model with four zones — agriculture, parking, safety, and climate — each wired to the ESP32 Plus and the Brilliant Smart City Kit](images/city-model.png)
+<span class="flowlence-hero__badge">⚡ Brilliant Global Competition · 2026–27</span>
 
-Over four hands-on projects you'll create:
+<h1 class="flowlence-hero__headline">Build a smart city.</h1>
+<h1 class="flowlence-hero__headline flowlence-hero__headline--gradient">Block by block.</h1>
 
-- 🌿 A self-watering plant system that knows when the soil is thirsty
-- 🚦 A smart parking spot with automated gate access
-- 🚨 A safety system that detects gas leaks and fire
-- 🌡️ A climate-control system that turns a fan on automatically
+<p class="flowlence-hero__sub">Drag-and-drop programming, real ESP32 hardware, and a competition that spans <strong>4&nbsp;continents</strong>. You'll build four working smart-city projects, then bring them to life as a model.</p>
 
-Every one of these is a real piece of technology that runs in real cities, scaled down to fit on your desk. You'll do it all with **Flowlence Code** — colourful blocks you drag and snap together, no typing required.
+<div class="flowlence-hero__ctas">
+<a class="flowlence-cta flowlence-cta--primary" href="getting-started/">Start Part 1 →</a>
+<a class="flowlence-cta flowlence-cta--secondary" href="getting-started/meet-your-kit/">Meet your kit</a>
+</div>
+
+<div class="flowlence-hero__trust">
+<span class="flowlence-hero__dots"><span></span><span></span><span></span></span>
+<span><strong>Grades 10–12</strong> · about 10 hours · no prior coding experience needed</span>
+</div>
+
+</div>
+<div class="flowlence-hero__image" markdown>
+<div class="flowlence-hero__image-frame">
+<img src="images/city-model.png" alt="A student-built smart city model with four zones — agriculture, parking, safety, and climate — each wired to the ESP32 Plus and the Brilliant Smart City Kit">
+</div>
+<div class="flowlence-hero__image-tag">What students build</div>
+</div>
+</div>
+</div>
 
 ## Why you're here
 
