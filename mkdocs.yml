@@ -43,6 +43,7 @@ extra_css:
   - stylesheets/chrome.css
   - stylesheets/home.css
   - stylesheets/pillars.css
+  - stylesheets/content.css
   - stylesheets/extra.css
 
 extra_javascript:
