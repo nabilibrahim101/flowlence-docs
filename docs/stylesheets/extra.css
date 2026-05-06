@@ -1,16 +1,33 @@
-:root {
-  --md-primary-fg-color: #F7862F;
-  --md-primary-fg-color--light: #F9A443;
-  --md-primary-fg-color--dark: #E0792B;
-  --md-accent-fg-color: #E8508A;
+/* ===================================================================
+   extra.css — Base type, header tweaks, download toast (legacy)
+   Color tokens live in tokens.css.
+   =================================================================== */
+
+/* ---------- Base typography (uses tokens from tokens.css) ---------- */
+body, .md-typeset {
+  font-family: var(--font-body);
+  font-feature-settings: "cv11", "ss01";  /* Inter stylistic alternates for cleaner numerals */
 }
 
-[data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #F7862F;
-  --md-primary-fg-color--light: #F9A443;
-  --md-primary-fg-color--dark: #E0792B;
-  --md-accent-fg-color: #E8508A;
+.md-typeset {
+  font-size: 0.85rem;        /* Material's base; scaled up by content.css later */
+  line-height: 1.65;
 }
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h1 { font-weight: 900; letter-spacing: -0.025em; }
+.md-typeset h2 { font-weight: 800; letter-spacing: -0.02em; }
+.md-typeset h3 { font-weight: 700; letter-spacing: -0.015em; }
+
+.md-typeset code {
+  font-family: var(--font-mono);
+}
+
+/* ---------- Header / nav tweaks (preserved from prior work) ---------- */
 
 /* White header with subtle border */
 .md-header {
