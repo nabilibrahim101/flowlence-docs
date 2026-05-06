@@ -17,27 +17,21 @@
   border-radius: 0;
 }
 
-/* Single-column hero: text content stacked above the image, both centered.
-   This avoids the height-imbalance dead zones the 2-column layout produced. */
+/* Single-column hero: every hero element stacks as a direct flex child.
+   Order in the markdown = vertical order on screen. Centered text + items. */
 .flowlence-hero__grid {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
   align-items: center;
-}
-
-/* The unclassed wrapper div around badge/headline/sub/CTAs/trust */
-.flowlence-hero__grid > div:first-child {
   text-align: center;
-  max-width: 720px;
-  width: 100%;
 }
 
 @media (max-width: 900px) {
   .flowlence-hero__grid {
-    gap: 2rem;
+    gap: 1.25rem;
   }
 }
 
@@ -90,8 +84,8 @@
   font-size: 1.05rem;
   line-height: 1.55;
   color: #475569;
-  margin: 0 auto 2rem;
-  max-width: 540px;
+  margin: 0 auto 0.5rem;
+  max-width: 760px;   /* wide enough that "Washington, D.C." doesn't orphan */
 }
 [data-md-color-scheme="slate"] .flowlence-hero__sub {
   color: #cbd5e1;
@@ -145,7 +139,7 @@
 
 /* ---------- Trust line ---------- */
 .flowlence-hero__trust {
-  margin-top: 2rem;
+  margin-top: 0;   /* grid gap handles spacing now */
   display: flex;
   align-items: center;
   justify-content: center;   /* match centered hero column */

@@ -7,7 +7,6 @@ hide:
 
 <div class="flowlence-hero" markdown>
 <div class="flowlence-hero__grid" markdown>
-<div markdown>
 
 <span class="flowlence-hero__badge">⚡ Brilliant Global Competition · 2026–2027</span>
 
@@ -15,6 +14,13 @@ hide:
 <h1 class="flowlence-hero__headline flowlence-hero__headline--gradient">Block by block.</h1>
 
 <p class="flowlence-hero__sub">Drag-and-drop programming, real ESP32 hardware, and a path from your school's regional championship to <strong>the BGC Global Championship in Washington, D.C.</strong> You'll build four working smart-city projects, then bring them to life as a model.</p>
+
+<div class="flowlence-hero__image" markdown>
+<div class="flowlence-hero__image-frame">
+<img src="images/city-model.png" alt="A student-built smart city model with four zones — agriculture, parking, safety, and climate — each wired to the ESP32 Plus and the Brilliant Smart City Kit">
+</div>
+<div class="flowlence-hero__image-tag">What students build</div>
+</div>
 
 <div class="flowlence-hero__ctas">
 <a class="flowlence-cta flowlence-cta--primary" href="getting-started/">Start Part 1 →</a>
@@ -26,13 +32,6 @@ hide:
 <span><strong>Grades 10–12</strong> · no prior coding experience needed</span>
 </div>
 
-</div>
-<div class="flowlence-hero__image" markdown>
-<div class="flowlence-hero__image-frame">
-<img src="images/city-model.png" alt="A student-built smart city model with four zones — agriculture, parking, safety, and climate — each wired to the ESP32 Plus and the Brilliant Smart City Kit">
-</div>
-<div class="flowlence-hero__image-tag">What students build</div>
-</div>
 </div>
 </div>
 
