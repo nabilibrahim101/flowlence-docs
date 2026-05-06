@@ -1,0 +1,71 @@
+/* ===================================================================
+   chrome.css — Header lockup + ribbon line + footer
+   Spec ref: §5
+   =================================================================== */
+
+/* ---------- Header background (light + dark) ---------- */
+.md-header {
+  background-color: #ffffff;
+  color: var(--flowlence-slate);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+[data-md-color-scheme="slate"] .md-header {
+  background-color: var(--flowlence-slate);
+  color: #f1f5f9;
+}
+
+/* ---------- The lockup (bgc | Flowlence Learn) ---------- */
+.flowlence-lockup {
+  display: flex !important;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+/* The "bgc" stylized mark */
+.flowlence-lockup__bgc {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: -0.05em;
+  background: var(--ribbon-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+
+/* The vertical divider */
+.flowlence-lockup__divider {
+  display: inline-block;
+  width: 1px;
+  height: 22px;
+  background: #cbd5e1;
+}
+[data-md-color-scheme="slate"] .flowlence-lockup__divider {
+  background: #334155;
+}
+
+/* "Flowlence Learn" wordmark */
+.flowlence-lockup__name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  color: var(--flowlence-slate);
+}
+[data-md-color-scheme="slate"] .flowlence-lockup__name {
+  color: #f1f5f9;
+}
+
+/* ---------- The 3px ribbon line under the header ---------- */
+.flowlence-ribbon-line {
+  height: 3px;
+  background: var(--ribbon-gradient);
+}

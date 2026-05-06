@@ -40,6 +40,7 @@ theme:
 extra_css:
   - https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800;900&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400&display=swap
   - stylesheets/tokens.css
+  - stylesheets/chrome.css
   - stylesheets/extra.css
 
 extra_javascript:
