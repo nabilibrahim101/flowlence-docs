@@ -71,11 +71,13 @@ Three 3-pin Dupont cables, three sensor modules, three plug-in connections. That
 
 **Step by step:**
 
-1. Unplug the USB cable from your ESP32 Plus.
-2. Plug a 3-pin cable between the DHT11 module and pin **IO 15** (match S / V / G at both ends).
-3. Plug a 4-pin I²C cable between the LCD module and the dedicated **I²C header** on the ESP32 Plus (labelled `GND V SDA SCL` near the top of the board).
-4. Plug a 3-pin cable between the White LED module and pin **IO 5**.
-5. Plug the USB cable back in.
+<ol class="flowlence-steps" markdown>
+<li markdown>Unplug the USB cable from your ESP32 Plus.</li>
+<li markdown>Plug a 3-pin cable between the DHT11 module and pin **IO 15** (match S / V / G at both ends).</li>
+<li markdown>Plug a 4-pin I²C cable between the LCD module and the dedicated **I²C header** on the ESP32 Plus (labelled `GND V SDA SCL` near the top of the board).</li>
+<li markdown>Plug a 3-pin cable between the White LED module and pin **IO 5**.</li>
+<li markdown>Plug the USB cable back in.</li>
+</ol>
 
 !!! warning "Disconnect USB before wiring"
     You know the drill by now — unplug, wire, plug back in.

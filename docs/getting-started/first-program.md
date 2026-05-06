@@ -110,9 +110,11 @@ Add another `set LED on pin GPIO 27` block, click its dropdown, and change `ON` 
 
 ## Upload and watch
 
-1. Make sure the USB cable is plugged in.
-2. Click **Connect** in the top bar, pick the COM port that appears, then click the green **Upload** button (top right).
-3. Wait about 30 seconds for the program to compile and flash.
+<ol class="flowlence-steps" markdown>
+<li markdown>Make sure the USB cable is plugged in.</li>
+<li markdown>Click **Connect** in the top bar, pick the COM port that appears, then click the green **Upload** button (top right).</li>
+<li markdown>Wait about 30 seconds for the program to compile and flash.</li>
+</ol>
 
 The LED on your wired-up module starts blinking — **on for 1 second, off for 1 second, repeat.**
 

@@ -50,10 +50,12 @@ A single 3-pin Dupont cable carries all three connections at once.
 
 If you're rebuilding from scratch:
 
-1. Unplug the USB cable from your ESP32 Plus.
-2. Plug a 3-pin Dupont cable into the LED module — match S/V/G.
-3. Plug the other end into the **IO 27** header on the ESP32 Plus.
-4. Plug the USB cable back in.
+<ol class="flowlence-steps" markdown>
+<li markdown>Unplug the USB cable from your ESP32 Plus.</li>
+<li markdown>Plug a 3-pin Dupont cable into the LED module — match S/V/G.</li>
+<li markdown>Plug the other end into the **IO 27** header on the ESP32 Plus.</li>
+<li markdown>Plug the USB cable back in.</li>
+</ol>
 
 !!! tip "Already wired from First Program?"
     Leave it as-is. You'll add three more modules (soil probe, water-level detector, relay) on different pins — they don't conflict.

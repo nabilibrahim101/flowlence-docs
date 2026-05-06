@@ -67,10 +67,12 @@ A Push Button lets the user silence and re-arm the alarm once the flame is gone.
 !!! danger "Test safely"
     Use a **small candle or long lighter held well away from the ESP32 and any flammable materials**. Have an adult supervise. Never test with a fuel source larger than a single candle flame. See [Fire Detector safety notes](fire-detector.md).
 
-1. Upload the code.
-2. Hold a small lit candle about 20 cm in front of the Fire Detector's round sensor.
-3. The Active Buzzer should beep and the White LED should flash immediately.
-4. Remove the flame and press the Push Button to re-arm.
+<ol class="flowlence-steps" markdown>
+<li markdown>Upload the code.</li>
+<li markdown>Hold a small lit candle about 20 cm in front of the Fire Detector's round sensor.</li>
+<li markdown>The Active Buzzer should beep and the White LED should flash immediately.</li>
+<li markdown>Remove the flame and press the Push Button to re-arm.</li>
+</ol>
 
 ## Extend it
 
