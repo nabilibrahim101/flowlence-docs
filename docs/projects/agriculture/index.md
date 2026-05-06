@@ -1,3 +1,7 @@
+---
+pillar: agriculture
+---
+
 # Part 2 · Smart Agriculture
 
 !!! abstract "What you'll build"

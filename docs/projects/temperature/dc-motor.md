@@ -1,3 +1,7 @@
+---
+pillar: temperature
+---
+
 # DC Motor
 
 !!! abstract "At a glance"

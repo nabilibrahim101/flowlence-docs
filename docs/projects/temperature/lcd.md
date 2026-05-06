@@ -1,3 +1,7 @@
+---
+pillar: temperature
+---
+
 # LCD Display (16x2 I2C)
 
 ## What Is It?

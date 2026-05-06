@@ -1,3 +1,7 @@
+---
+pillar: safety
+---
+
 # Gas Leak Sensor
 
 !!! abstract "At a glance"

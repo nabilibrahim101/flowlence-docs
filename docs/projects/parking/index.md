@@ -1,3 +1,7 @@
+---
+pillar: parking
+---
+
 # Part 3 · Smart Parking
 
 !!! abstract "What you'll build"

@@ -1,3 +1,7 @@
+---
+pillar: safety
+---
+
 # Active Buzzer
 
 !!! abstract "At a glance"

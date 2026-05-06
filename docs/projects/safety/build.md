@@ -1,3 +1,7 @@
+---
+pillar: safety
+---
+
 # Alarm System
 
 !!! warning "This project was redesigned to match your kit"

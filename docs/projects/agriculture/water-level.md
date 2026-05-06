@@ -1,3 +1,7 @@
+---
+pillar: agriculture
+---
+
 # Water Level Detector
 
 !!! abstract "At a glance"

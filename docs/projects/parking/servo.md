@@ -1,3 +1,7 @@
+---
+pillar: parking
+---
+
 # Servo Motor
 
 ## What Is It?

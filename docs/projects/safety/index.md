@@ -1,3 +1,7 @@
+---
+pillar: safety
+---
+
 # Part 4 · Smart Safety
 
 !!! abstract "What you'll build"

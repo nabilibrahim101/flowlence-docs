@@ -1,3 +1,7 @@
+---
+pillar: safety
+---
+
 # Fire Detector
 
 !!! abstract "At a glance"

@@ -1,3 +1,7 @@
+---
+pillar: agriculture
+---
+
 # Water Pump (with Relay)
 
 !!! abstract "At a glance"

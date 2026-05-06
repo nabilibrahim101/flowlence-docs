@@ -1,3 +1,7 @@
+---
+pillar: temperature
+---
+
 # Temperature & Humidity (DHT11)
 
 !!! abstract "At a glance"

@@ -1,3 +1,7 @@
+---
+pillar: temperature
+---
+
 # Part 5 · Smart Temperature
 
 !!! abstract "What you'll build"

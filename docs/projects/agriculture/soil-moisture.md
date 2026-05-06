@@ -1,3 +1,7 @@
+---
+pillar: agriculture
+---
+
 # Soil Moisture Probe
 
 !!! abstract "At a glance"

@@ -1,3 +1,7 @@
+---
+pillar: parking
+---
+
 # Ultrasonic Sensor (HC-SR04)
 
 ## What Is It?

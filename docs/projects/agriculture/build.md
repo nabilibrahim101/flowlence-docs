@@ -1,3 +1,7 @@
+---
+pillar: agriculture
+---
+
 # Build the Smart Agriculture System
 
 !!! abstract "At a glance"

@@ -1,3 +1,7 @@
+---
+pillar: parking
+---
+
 # Build the Smart Parking System
 
 !!! abstract "At a glance"

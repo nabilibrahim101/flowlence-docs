@@ -1,3 +1,7 @@
+---
+pillar: temperature
+---
+
 # Weather Station
 
 !!! abstract "At a glance"
