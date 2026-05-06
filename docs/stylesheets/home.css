@@ -20,7 +20,7 @@
 /* Single-column hero: every hero element stacks as a direct flex child.
    Order in the markdown = vertical order on screen. Centered text + items. */
 .flowlence-hero__grid {
-  max-width: 1100px;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -57,17 +57,20 @@
 .flowlence-hero__headline {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   line-height: 1.05;
   letter-spacing: -0.03em;
   color: var(--flowlence-slate);
-  margin: 0 0 0.3rem;
+  margin: 0;
 }
 [data-md-color-scheme="slate"] .flowlence-hero__headline {
   color: #f1f5f9;
 }
+/* The gradient half (line 2) — pulled tight against line 1 by negating
+   the parent grid's flex gap. Without this, "Build a smart city." and
+   "Block by block." had ~24px of empty space between them. */
 .flowlence-hero__headline--gradient {
-  margin: 0 0 1.4rem;
+  margin: -1.4rem 0 0;
   background: var(--ribbon-gradient);
   -webkit-background-clip: text;
   background-clip: text;
@@ -75,8 +78,8 @@
 }
 
 @media (max-width: 600px) {
-  .flowlence-hero__headline,
-  .flowlence-hero__headline--gradient { font-size: 2rem; }
+  .flowlence-hero__headline { font-size: 2.2rem; }
+  .flowlence-hero__headline--gradient { font-size: 2.2rem; margin-top: -1rem; }
 }
 
 /* ---------- Sub-headline ---------- */
@@ -85,7 +88,7 @@
   line-height: 1.55;
   color: #475569;
   margin: 0 auto 0.5rem;
-  max-width: 760px;   /* wide enough that "Washington, D.C." doesn't orphan */
+  max-width: 920px;   /* wider — uses more of the hero's horizontal space */
 }
 [data-md-color-scheme="slate"] .flowlence-hero__sub {
   color: #cbd5e1;
