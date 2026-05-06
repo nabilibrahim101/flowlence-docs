@@ -164,3 +164,13 @@
   border-top-color: #334155;
   color: #94a3b8;
 }
+
+/* ---------- Mobile chrome adjustments ---------- */
+@media (max-width: 600px) {
+  .flowlence-lockup__bgc { font-size: 1.2rem; }
+  .flowlence-lockup__name { font-size: 0.9rem; }
+  .flowlence-lockup__divider { height: 18px; }
+  .flowlence-footer__inner { padding: 1.5rem 1rem; }
+  .flowlence-footer__cols { grid-template-columns: 1fr; gap: 1rem; }
+  .flowlence-footer__legal { flex-direction: column; align-items: flex-start; }
+}

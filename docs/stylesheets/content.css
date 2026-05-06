@@ -222,3 +222,37 @@
   background-color: #1e293b;
   color: #f1f5f9;
 }
+
+/* ===================================================================
+   Dark mode adjustments — keep coherence with the slate scheme
+   =================================================================== */
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.tip,
+[data-md-color-scheme="slate"] .md-typeset details.tip {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.info,
+[data-md-color-scheme="slate"] .md-typeset details.info {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.warning,
+[data-md-color-scheme="slate"] .md-typeset details.warning {
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.danger,
+[data-md-color-scheme="slate"] .md-typeset details.danger {
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.question,
+[data-md-color-scheme="slate"] .md-typeset details.question {
+  background: linear-gradient(135deg, rgba(247, 134, 47, 0.08) 0%, rgba(248, 86, 141, 0.08) 50%, rgba(192, 38, 211, 0.08) 100%);
+}
+
+/* Keep code-block contrast — already dark, but check inline code */
+[data-md-color-scheme="slate"] .flowlence-hero {
+  background: linear-gradient(135deg, rgba(255, 247, 230, 0.05) 0%, rgba(30, 41, 59, 1) 50%, rgba(255, 232, 240, 0.08) 100%);
+}

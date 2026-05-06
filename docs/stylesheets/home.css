@@ -141,7 +141,7 @@
   align-items: center;
   gap: 0.7rem;
   font-size: 0.82rem;
-  color: #64748b;
+  color: #475569;   /* a11y: darkened from #64748b → #475569 for better contrast on cream bg */
 }
 .flowlence-hero__dots {
   display: inline-flex;
@@ -195,4 +195,12 @@
   height: 8px;
   border-radius: 50%;
   background: var(--ribbon-gradient);
+}
+
+/* ---------- Mobile hero ---------- */
+@media (max-width: 600px) {
+  .flowlence-hero { padding: 2rem 1.25rem; }
+  .flowlence-hero__sub { font-size: 1rem; }
+  .flowlence-cta { padding: 0.7rem 1.1rem; font-size: 0.9rem; }
+  .flowlence-hero__image-frame { transform: rotate(0); }  /* drop the tilt on small screens */
 }
