@@ -174,3 +174,51 @@
   -webkit-mask: none;
   mask: none;
 }
+
+/* ===================================================================
+   8.4 Code blocks — Flowlence Code editor palette
+   Slate background + cream text + amber/purple/orange syntax highlights
+   =================================================================== */
+
+.md-typeset pre,
+.md-typeset .highlight pre,
+.md-typeset code.highlight,
+.md-typeset .highlighttable .highlight pre {
+  background-color: var(--flowlence-slate) !important;
+  color: #e2e8f0 !important;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+/* Comments */
+.md-typeset .highlight .c, .md-typeset .highlight .c1, .md-typeset .highlight .cm { color: #94a3b8 !important; }
+
+/* Keywords */
+.md-typeset .highlight .k, .md-typeset .highlight .kn, .md-typeset .highlight .kd { color: #c084fc !important; }
+
+/* Function/method names */
+.md-typeset .highlight .nf, .md-typeset .highlight .nb { color: #fbbf24 !important; }
+
+/* Numbers + literals */
+.md-typeset .highlight .mi, .md-typeset .highlight .mf, .md-typeset .highlight .mh { color: #fb923c !important; }
+
+/* Strings */
+.md-typeset .highlight .s, .md-typeset .highlight .s1, .md-typeset .highlight .s2 { color: #86efac !important; }
+
+/* Inline code stays light */
+.md-typeset code:not(pre > code) {
+  background-color: #f1f5f9;
+  color: var(--flowlence-slate);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+[data-md-color-scheme="slate"] .md-typeset code:not(pre > code) {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
