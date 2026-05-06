@@ -17,18 +17,26 @@
   border-radius: 0;
 }
 
+/* Single-column hero: text content stacked above the image, both centered.
+   This avoids the height-imbalance dead zones the 2-column layout produced. */
 .flowlence-hero__grid {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
   align-items: center;
+}
+
+/* The unclassed wrapper div around badge/headline/sub/CTAs/trust */
+.flowlence-hero__grid > div:first-child {
+  text-align: center;
+  max-width: 720px;
+  width: 100%;
 }
 
 @media (max-width: 900px) {
   .flowlence-hero__grid {
-    grid-template-columns: 1fr;
     gap: 2rem;
   }
 }
@@ -55,9 +63,9 @@
 .flowlence-hero__headline {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 3.6rem;
-  line-height: 1.0;
-  letter-spacing: -0.035em;
+  font-size: 2.8rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   color: var(--flowlence-slate);
   margin: 0 0 0.3rem;
 }
@@ -74,16 +82,16 @@
 
 @media (max-width: 600px) {
   .flowlence-hero__headline,
-  .flowlence-hero__headline--gradient { font-size: 2.4rem; }
+  .flowlence-hero__headline--gradient { font-size: 2rem; }
 }
 
 /* ---------- Sub-headline ---------- */
 .flowlence-hero__sub {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   line-height: 1.55;
   color: #475569;
-  margin: 0 0 2rem;
-  max-width: 480px;
+  margin: 0 auto 2rem;
+  max-width: 540px;
 }
 [data-md-color-scheme="slate"] .flowlence-hero__sub {
   color: #cbd5e1;
@@ -95,6 +103,7 @@
   gap: 0.85rem;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;   /* center the buttons inside the centered text column */
 }
 
 .flowlence-cta {
@@ -139,6 +148,7 @@
   margin-top: 2rem;
   display: flex;
   align-items: center;
+  justify-content: center;   /* match centered hero column */
   gap: 0.7rem;
   font-size: 0.82rem;
   color: #475569;   /* a11y: darkened from #64748b → #475569 for better contrast on cream bg */
@@ -163,6 +173,8 @@
 /* ---------- City model image frame ---------- */
 .flowlence-hero__image {
   position: relative;
+  width: 100%;
+  max-width: 640px;   /* keeps image readable in single-column layout */
 }
 .flowlence-hero__image-frame {
   background: #fff;
