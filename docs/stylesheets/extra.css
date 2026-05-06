@@ -89,3 +89,78 @@
 [data-md-color-scheme="slate"] .md-header .md-icon {
   color: #cccccc;
 }
+
+/* ─── Download-started toast ────────────────────────────────────────
+   Triggered by docs/javascripts/download-toast.js when the user
+   clicks any link to a Flowlence Code .exe installer. */
+.flowlence-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: 480px;
+  padding: 0.85rem 1rem 0.85rem 1.1rem;
+  background: var(--md-primary-fg-color);
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translate(-50%, calc(100% + 1.5rem));
+  transition:
+    transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.25s ease-out;
+  z-index: 9999;
+}
+
+.flowlence-toast--visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.flowlence-toast-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.flowlence-toast-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.flowlence-toast-text strong {
+  font-weight: 700;
+}
+
+.flowlence-toast-close {
+  background: transparent;
+  border: 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  margin-left: 0.25rem;
+  transition: color 0.15s ease-out;
+}
+
+.flowlence-toast-close:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  .flowlence-toast {
+    left: 1rem;
+    right: 1rem;
+    max-width: none;
+    transform: translate(0, calc(100% + 1.5rem));
+  }
+  .flowlence-toast--visible {
+    transform: translate(0, 0);
+  }
+}
