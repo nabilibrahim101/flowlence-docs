@@ -174,3 +174,44 @@
   .flowlence-footer__cols { grid-template-columns: 1fr; gap: 1rem; }
   .flowlence-footer__legal { flex-direction: column; align-items: flex-start; }
 }
+
+/* ---------- Top nav tabs row · white instead of orange ---------- */
+/* The ribbon gradient line ABOVE the tabs (in the header) stays — see .flowlence-ribbon-line.
+   Only the .md-tabs row itself becomes white in light mode, slate in dark mode. */
+.md-tabs {
+  background-color: #ffffff;
+  color: var(--flowlence-slate);
+  border-bottom: 1px solid #e2e8f0;
+}
+.md-tabs__link {
+  color: #475569;
+  opacity: 1;
+}
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--flowlence-orange);
+  font-weight: 700;
+  opacity: 1;
+}
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: var(--flowlence-slate);
+  border-bottom-color: #334155;
+}
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: #cbd5e1;
+}
+[data-md-color-scheme="slate"] .md-tabs__link--active,
+[data-md-color-scheme="slate"] .md-tabs__link:hover {
+  color: var(--flowlence-orange-light);
+}
+
+/* ---------- Left sidebar nav · slightly larger font ---------- */
+.md-nav__link {
+  font-size: 0.85rem;  /* up from Material's ~0.7rem default — easier to read */
+}
+.md-nav__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

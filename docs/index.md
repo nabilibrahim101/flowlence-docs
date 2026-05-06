@@ -1,5 +1,8 @@
 ---
 body_class: flowlence-home
+hide:
+  - navigation
+  - toc
 ---
 
 # Welcome to Flowlence Learn
@@ -13,7 +16,7 @@ body_class: flowlence-home
 <h1 class="flowlence-hero__headline">Build a smart city.</h1>
 <h1 class="flowlence-hero__headline flowlence-hero__headline--gradient">Block by block.</h1>
 
-<p class="flowlence-hero__sub">Drag-and-drop programming, real ESP32 hardware, and a competition that spans <strong>4&nbsp;continents</strong>. You'll build four working smart-city projects, then bring them to life as a model.</p>
+<p class="flowlence-hero__sub">Drag-and-drop programming, real ESP32 hardware, and a path from your school's regional championship to <strong>the BGC Global Championship in Washington, D.C.</strong> You'll build four working smart-city projects, then bring them to life as a model.</p>
 
 <div class="flowlence-hero__ctas">
 <a class="flowlence-cta flowlence-cta--primary" href="getting-started/">Start Part 1 →</a>
@@ -37,7 +40,11 @@ body_class: flowlence-home
 
 ## Why you're here
 
-This tutorial is the technology companion for the **[Brilliant Global Competition](https://brilliantglobalcompetitions.com/)** — a worldwide challenge for students in grades 10–12 to design and build a smart-city model. Your STEM teacher will guide you through the urban-design and presentation pillars; **these pages cover the tech half**: the hardware in your kit, the block-based programming, and the projects themselves.
+This tutorial is the technology companion for the **[Brilliant Global Competitions](https://bgc.education)** — global STEM competitions where students apply technology, engineering, science, mathematics, and creative design to solve real-world challenges. The 2026–2027 theme is **Smart Cities**: *Where Smart Vision Meets IoT-Driven Reality.*
+
+Students design and build a fully-functional Smart City model using industry-grade Internet of Things (IoT) sensors. National and Regional Champions compete at the **Global Championship in Washington, D.C.** — with a Global Champion experience that includes a 3-day NASA workshop and visits to MIT and Harvard.
+
+Your STEM teacher guides the urban-design and presentation pillars; **these pages cover the tech half**: the hardware in your kit, the block-based programming, and the projects themselves.
 
 ## How the tutorial is organised
 

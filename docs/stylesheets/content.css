@@ -141,7 +141,7 @@
   background: var(--ribbon-gradient-soft);
   border: 1px solid transparent;
   border-radius: 10px;
-  padding: 1.1rem 1.3rem;
+  padding: 0.85rem 1.1rem;
   box-shadow: 0 0 0 1px rgba(248, 86, 141, 0.12) inset;
 }
 .md-typeset .admonition.question > .admonition-title,
@@ -150,26 +150,26 @@
   color: var(--flowlence-slate);
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   text-transform: none;
   letter-spacing: -0.01em;
-  padding-left: 2.4rem;        /* room for the ⚡ badge */
+  padding-left: 2.1rem;
 }
 .md-typeset .admonition.question > .admonition-title::before,
 .md-typeset details.question > summary::before {
   content: "⚡";
   background: var(--ribbon-gradient);
   color: #fff;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 0.75rem;
-  top: 0.75rem;
-  font-size: 0.95rem;
+  left: 0.6rem;
+  top: 0.6rem;
+  font-size: 0.78rem;
   font-weight: 800;
   -webkit-mask: none;
   mask: none;

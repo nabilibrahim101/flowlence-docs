@@ -2,7 +2,7 @@
 
 Your **Brilliant Smart City Kit** contains everything you need to build the four smart-city projects in this tutorial — no breadboard, no soldering, no extra parts to buy. Every sensor ships on a small breakout board with a Dupont cable that plugs straight into the **ESP32 Plus shield** — most modules use a **3-pin** cable (Ground / Voltage / Signal); the I²C modules (LCD Display, RFID Reader) use a **4-pin** cable that adds the SCL clock line.
 
-![Brilliant Smart City Kit — the official box, powered by Flowlence and the BGC](../images/getting-started/brilliant-smart-city-kit.png){ width="420" }
+![Brilliant Smart City Kit — the official box, powered by Flowlence and the BGC](../images/getting-started/brilliant-smart-city-kit-no-bg.png){ width="600" }
 
 ## The ESP32 Plus: your city's brain
 
