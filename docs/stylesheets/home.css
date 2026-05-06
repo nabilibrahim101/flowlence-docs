@@ -143,6 +143,9 @@
   font-size: 0.82rem;
   color: #475569;   /* a11y: darkened from #64748b → #475569 for better contrast on cream bg */
 }
+[data-md-color-scheme="slate"] .flowlence-hero__trust {
+  color: #94a3b8;   /* dark-mode contrast on slate hero bg */
+}
 .flowlence-hero__dots {
   display: inline-flex;
 }

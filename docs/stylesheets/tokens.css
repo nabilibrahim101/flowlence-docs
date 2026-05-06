@@ -19,7 +19,6 @@
   /* ---------- Shared / Ribbon ---------- */
   --ribbon-gradient: linear-gradient(90deg, #F7862F 0%, #F8568D 50%, #C026D3 100%);
   --ribbon-gradient-soft: linear-gradient(135deg, #FFF7E6 0%, #FFFFFF 50%, #FFE8F0 100%);
-  --ribbon-gradient-vertical: linear-gradient(180deg, #F7862F 0%, #F8568D 50%, #C026D3 100%);
 
   /* ---------- Pillars (default = Flowlence orange) ---------- */
   --pillar: var(--flowlence-orange);
