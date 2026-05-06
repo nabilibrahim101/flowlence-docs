@@ -1,0 +1,198 @@
+/* ===================================================================
+   home.css — Home page hero + below-the-fold treatments
+   Spec ref: §6
+   Scoped via .flowlence-home-* class — only applies on the index page.
+   =================================================================== */
+
+/* Hide the page H1 ("Welcome to Flowlence Learn") since the hero replaces it */
+.flowlence-home .md-typeset > h1:first-of-type {
+  display: none;
+}
+
+/* ---------- Hero container ---------- */
+.flowlence-hero {
+  background: var(--ribbon-gradient-soft);
+  margin: -1.5rem -1rem 2.5rem;
+  padding: 3rem 2rem;
+  border-radius: 0;
+}
+
+.flowlence-hero__grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .flowlence-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ---------- Competition badge ---------- */
+.flowlence-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(192, 38, 211, 0.08);
+  border: 1px solid rgba(192, 38, 211, 0.2);
+  margin-bottom: 1.4rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bgc-magenta);
+}
+
+/* ---------- Headline ---------- */
+.flowlence-hero__headline {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 3.6rem;
+  line-height: 1.0;
+  letter-spacing: -0.035em;
+  color: var(--flowlence-slate);
+  margin: 0 0 0.3rem;
+}
+[data-md-color-scheme="slate"] .flowlence-hero__headline {
+  color: #f1f5f9;
+}
+.flowlence-hero__headline--gradient {
+  margin: 0 0 1.4rem;
+  background: var(--ribbon-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 600px) {
+  .flowlence-hero__headline,
+  .flowlence-hero__headline--gradient { font-size: 2.4rem; }
+}
+
+/* ---------- Sub-headline ---------- */
+.flowlence-hero__sub {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0 0 2rem;
+  max-width: 480px;
+}
+[data-md-color-scheme="slate"] .flowlence-hero__sub {
+  color: #cbd5e1;
+}
+
+/* ---------- CTAs ---------- */
+.flowlence-hero__ctas {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flowlence-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.flowlence-cta--primary {
+  background: var(--ribbon-gradient);
+  color: #fff !important;
+  box-shadow: 0 4px 14px rgba(248, 86, 141, 0.35);
+}
+.flowlence-cta--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(248, 86, 141, 0.45);
+}
+.flowlence-cta--secondary {
+  background: #fff;
+  color: var(--flowlence-slate) !important;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+}
+.flowlence-cta--secondary:hover {
+  border-color: var(--flowlence-slate);
+}
+[data-md-color-scheme="slate"] .flowlence-cta--secondary {
+  background: #1e293b;
+  color: #f1f5f9 !important;
+  border-color: #334155;
+}
+
+/* ---------- Trust line ---------- */
+.flowlence-hero__trust {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.82rem;
+  color: #64748b;
+}
+.flowlence-hero__dots {
+  display: inline-flex;
+}
+.flowlence-hero__dots span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.flowlence-hero__dots span:nth-child(1) { background: var(--flowlence-orange); }
+.flowlence-hero__dots span:nth-child(2) { background: var(--bgc-coral); margin-left: -8px; }
+.flowlence-hero__dots span:nth-child(3) { background: var(--bgc-magenta); margin-left: -8px; }
+
+/* ---------- City model image frame ---------- */
+.flowlence-hero__image {
+  position: relative;
+}
+.flowlence-hero__image-frame {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.10);
+  transform: rotate(0.8deg);
+}
+.flowlence-hero__image-frame img {
+  width: 100%;
+  display: block;
+}
+.flowlence-hero__image-tag {
+  position: absolute;
+  bottom: -12px;
+  right: 14px;
+  background: var(--flowlence-slate);
+  color: #fff;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.flowlence-hero__image-tag::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ribbon-gradient);
+}
