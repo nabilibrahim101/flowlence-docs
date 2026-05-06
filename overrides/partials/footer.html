@@ -1,0 +1,91 @@
+{#-
+  Custom footer for learn.flowlence.com
+  Renders: faded ribbon top-edge + lockup + 3 link columns + copyright.
+  Spec: §5.2
+-#}
+
+{#- Material's built-in prev/next nav (preserve for keyboard navigation) -#}
+{% if "navigation.footer" in features %}
+  {% if page.previous_page or page.next_page %}
+    {% if page.meta and page.meta.hide %}
+      {% set hidden = "hidden" if "footer" in page.meta.hide %}
+    {% endif %}
+    <nav class="md-footer__inner md-grid" aria-label="{{ lang.t('footer') }}" {{ hidden }}>
+      {% if page.previous_page %}
+        {% set direction = lang.t("footer.previous") %}
+        <a href="{{ page.previous_page.url | url }}" class="md-footer__link md-footer__link--prev" aria-label="{{ direction }}: {{ page.previous_page.title | e }}">
+          <div class="md-footer__button md-icon">
+            {% include ".icons/material/arrow-left.svg" %}
+          </div>
+          <div class="md-footer__title">
+            <span class="md-footer__direction">{{ direction }}</span>
+            <div class="md-ellipsis">{{ page.previous_page.title }}</div>
+          </div>
+        </a>
+      {% endif %}
+      {% if page.next_page %}
+        {% set direction = lang.t("footer.next") %}
+        <a href="{{ page.next_page.url | url }}" class="md-footer__link md-footer__link--next" aria-label="{{ direction }}: {{ page.next_page.title | e }}">
+          <div class="md-footer__title">
+            <span class="md-footer__direction">{{ direction }}</span>
+            <div class="md-ellipsis">{{ page.next_page.title }}</div>
+          </div>
+          <div class="md-footer__button md-icon">
+            {% include ".icons/material/arrow-right.svg" %}
+          </div>
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
+{% endif %}
+
+{#- Custom Flowlence × BGC footer -#}
+<footer class="md-footer flowlence-footer">
+
+  {#- Faded ribbon top-edge -#}
+  <div class="flowlence-footer__ribbon" aria-hidden="true"></div>
+
+  <div class="flowlence-footer__inner md-grid">
+
+    {#- Brand lockup row -#}
+    <div class="flowlence-footer__brand">
+      <span class="flowlence-lockup__bgc">bgc</span>
+      <span class="flowlence-lockup__divider" aria-hidden="true"></span>
+      <span class="flowlence-lockup__name">Flowlence Learn</span>
+    </div>
+
+    {#- Link columns -#}
+    <div class="flowlence-footer__cols">
+      <div class="flowlence-footer__col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="https://bgc.education" target="_blank" rel="noopener">Brilliant Global Competitions ↗</a></li>
+          <li><a href="https://flowlence.com" target="_blank" rel="noopener">Flowlence ↗</a></li>
+          <li><a href="mailto:contact@flowlence.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="flowlence-footer__col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="{{ '/getting-started/install/' | url }}">Download Flowlence Code</a></li>
+          <li><a href="{{ '/getting-started/meet-your-kit/' | url }}">Brilliant Smart City Kit</a></li>
+          <li><a href="{{ '/reference/troubleshooting/' | url }}">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div class="flowlence-footer__col">
+        <h4>For Educators</h4>
+        <ul>
+          <li><a href="https://bgc.education" target="_blank" rel="noopener">Become a participating school ↗</a></li>
+          <li><a href="{{ '/reference/' | url }}">Coach materials</a></li>
+        </ul>
+      </div>
+    </div>
+
+    {#- Copyright -#}
+    <div class="flowlence-footer__legal">
+      <span>© {{ build_date_utc.strftime('%Y') if build_date_utc else '2026' }} Flowlence Inc. · in partnership with Brilliant Global Competitions</span>
+      <span>learn.flowlence.com</span>
+    </div>
+
+  </div>
+</footer>
