@@ -5,13 +5,11 @@ hide:
   - toc
 ---
 
-# Welcome to Flowlence Learn
-
 <div class="flowlence-hero" markdown>
 <div class="flowlence-hero__grid" markdown>
 <div markdown>
 
-<span class="flowlence-hero__badge">⚡ Brilliant Global Competition · 2026–27</span>
+<span class="flowlence-hero__badge">⚡ Brilliant Global Competition · 2026–2027</span>
 
 <h1 class="flowlence-hero__headline">Build a smart city.</h1>
 <h1 class="flowlence-hero__headline flowlence-hero__headline--gradient">Block by block.</h1>
@@ -25,7 +23,7 @@ hide:
 
 <div class="flowlence-hero__trust">
 <span class="flowlence-hero__dots"><span></span><span></span><span></span></span>
-<span><strong>Grades 10–12</strong> · about 10 hours · no prior coding experience needed</span>
+<span><strong>Grades 10–12</strong> · no prior coding experience needed</span>
 </div>
 
 </div>

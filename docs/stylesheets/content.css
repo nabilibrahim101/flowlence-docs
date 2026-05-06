@@ -4,15 +4,15 @@
    Typography (8.1), callouts (8.2), numbered steps (8.3), Try-it (8.5)
    =================================================================== */
 
-/* ---------- 8.1 Typography — larger, more breathable body ---------- */
+/* ---------- 8.1 Typography — moderate scale, closer to Material default ---------- */
 .md-typeset {
-  font-size: 1rem;            /* up from Material's 0.85rem default */
+  font-size: 0.9rem;         /* was 1rem; closer to Material's 0.85rem default */
   line-height: 1.65;
 }
 
 /* The first paragraph after the H1 — slightly larger as a "lead" */
 .md-typeset h1 + p {
-  font-size: 1.08rem;
+  font-size: 0.98rem;
   line-height: 1.65;
   color: #334155;
 }
@@ -20,9 +20,9 @@
   color: #cbd5e1;
 }
 
-.md-typeset h1 { font-size: 2.3rem; }
-.md-typeset h2 { font-size: 1.4rem; margin-top: 2rem; }
-.md-typeset h3 { font-size: 1.1rem; margin-top: 1.5rem; }
+.md-typeset h1 { font-size: 1.9rem; }
+.md-typeset h2 { font-size: 1.25rem; margin-top: 1.8rem; }
+.md-typeset h3 { font-size: 1rem; margin-top: 1.4rem; }
 
 /* ---------- 8.2 Callouts (admonitions) ---------- */
 /* Material's admonition selector: .admonition.<type> */

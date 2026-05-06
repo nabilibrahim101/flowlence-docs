@@ -13,7 +13,7 @@
 .flowlence-hero {
   background: var(--ribbon-gradient-soft);
   margin: -1.5rem -1rem 2.5rem;
-  padding: 3rem 2rem;
+  padding: 2.25rem 2rem 2rem;
   border-radius: 0;
 }
 
@@ -21,7 +21,7 @@
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: 3rem;
   align-items: center;
 }
