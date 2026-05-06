@@ -96,7 +96,6 @@ Each project maps to one of the four pillars that define real smart cities:
 - **Flowlence Code** — free download, installed on your computer ([Install guide](getting-started/install.md))
 - **Brilliant Smart City Kit** — ESP32 Plus board + the workshop sensors and modules ([Meet your kit](getting-started/meet-your-kit.md))
 - **A computer** — Windows 10 or later with a free USB port
-- **About 10 hours** — realistic time for a student working through Part 1 → Part 5
 
 ## How each Part is structured
 
