@@ -9,8 +9,10 @@
 
 ## Download
 
+[:material-download: Download Flowlence Code (Windows x64)](#){ .md-button .md-button--primary .md-button--disabled aria-disabled="true" }
+
 !!! info "Download coming soon"
-    The Flowlence Code installer is being finalized for general release. A direct download link will appear here as soon as it's ready.
+    The button above is intentionally disabled while we finalize the installer for general release. It will activate as soon as it's ready.
 
     **Need it now?** Contact your RVP coordinator and they will share the installer with you directly.
 
