@@ -82,13 +82,30 @@
 
 /* ---------- Disabled Material button (visible but non-interactive) ----------
    Used on the Download button while the installer is being finalized.
-   pointer-events: none stops clicks; opacity + grayscale signal "not active". */
+   Force a true greyscale palette (not a faded brand color) so the button
+   reads as obviously inactive rather than just "tinted". */
 .md-button.md-button--disabled,
 .md-button.md-button--disabled:hover,
 .md-button.md-button--disabled:focus {
-  opacity: 0.55;
-  filter: grayscale(0.4);
+  background: #cbd5e1 !important;
+  color: #64748b !important;
+  border-color: #cbd5e1 !important;
   cursor: not-allowed;
   pointer-events: none;
-  box-shadow: none;
+  box-shadow: none !important;
+  filter: none;
+  opacity: 1;
+}
+.md-button.md-button--disabled .twemoji svg {
+  fill: #64748b;
+}
+[data-md-color-scheme="slate"] .md-button.md-button--disabled,
+[data-md-color-scheme="slate"] .md-button.md-button--disabled:hover,
+[data-md-color-scheme="slate"] .md-button.md-button--disabled:focus {
+  background: #334155 !important;
+  color: #94a3b8 !important;
+  border-color: #334155 !important;
+}
+[data-md-color-scheme="slate"] .md-button.md-button--disabled .twemoji svg {
+  fill: #94a3b8;
 }

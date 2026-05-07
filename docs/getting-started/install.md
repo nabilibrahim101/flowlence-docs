@@ -14,7 +14,7 @@
 !!! info "Download coming soon"
     The button above is intentionally disabled while we finalize the installer for general release. It will activate as soon as it's ready.
 
-    **Need it now?** Contact your RVP coordinator and they will share the installer with you directly.
+    **Need it now?** [Contact Flowlence](https://flowlence.com/contact/) and we'll share the installer with you directly.
 
 !!! tip "On a different platform?"
     Flowlence Code is Windows-only at the moment. Mac and Linux builds are on the roadmap. If you're on a Mac or Linux machine, your STEM teacher can help you find a Windows machine for the workshop.
