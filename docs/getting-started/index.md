@@ -18,4 +18,4 @@ By the end of Part 1 you will:
 5. [Your First Program](first-program.md)
 
 !!! tip "New to programming?"
-    Don't worry — Flowlence Code is designed for beginners. You'll drag and snap colorful blocks together, and the program writes itself. No typing required to get started.
+    Don't worry. Flowlence Code is designed for beginners. You'll drag and snap colorful blocks together, and the program writes itself. No typing required to get started.

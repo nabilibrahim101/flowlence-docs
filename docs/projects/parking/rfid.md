@@ -11,7 +11,7 @@ pillar: parking
 
 ## What it is
 
-An RFID (Radio-Frequency Identification) reader uses a small radio coil to read the unique ID stored in a passive card or key-fob. The reader tells your ESP32 *which* card was tapped — you can then allow or deny access, log the event, or trigger a gate.
+An RFID (Radio-Frequency Identification) reader uses a small radio coil to read the unique ID stored in a passive card or key-fob. The reader tells your ESP32 *which* card was tapped, allowing you to allow or deny access, log the event, or trigger a gate.
 
 ![RFID Reader with card and fob](../../images/placeholder.svg)
 

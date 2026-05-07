@@ -18,7 +18,7 @@ pillar: temperature
 The **DHT11** is a small blue-and-white sensor that measures two things at once:
 
 - the **temperature** of the air around it (in °C)
-- the **relative humidity** — how much moisture is in the air, as a percentage
+- the **relative humidity**: how much moisture is in the air, as a percentage
 
 ![DHT11 sensor close-up](../../images/placeholder.svg)
 
@@ -26,7 +26,7 @@ You'll find this kind of sensor inside smart thermostats, greenhouses, and envir
 
 ## How it works
 
-Inside the DHT11 there are two separate sensing elements — one for temperature, one for humidity. A tiny chip on the back reads both, packs them into a single digital message, and sends that message down a single data wire to your ESP32 whenever it's asked.
+Inside the DHT11 there are two separate sensing elements: one for temperature, one for humidity. A tiny chip on the back reads both, packs them into a single digital message, and sends that message down a single data wire to your ESP32 whenever it's asked.
 
 This is why the DHT11 only needs **three** connections (Power, Ground, Data) even though it measures two things.
 
@@ -53,7 +53,7 @@ The DHT11 module in your kit has three pins labelled on the breakout board:
 | **V** | Power | ESP32 Plus **V** on the same header as IO 15 |
 | **G** | Ground | ESP32 Plus **G** on the same header as IO 15 |
 
-Because your ESP32 Plus shield has **G / V / S headers on every pin**, all three connections happen through a single 3-pin cable — no breadboard, no separate wires.
+Because your ESP32 Plus shield has **G / V / S headers on every pin**, all three connections happen through a single 3-pin cable: no breadboard, no separate wires.
 
 ## Wiring
 
@@ -68,7 +68,7 @@ Because your ESP32 Plus shield has **G / V / S headers on every pin**, all three
 5. Plug the USB cable back in.
 
 !!! tip "The cable only fits one way"
-    The Dupont cable has a keyed connector — if it doesn't slide on easily, you're trying it backwards. Don't force it.
+    The Dupont cable has a keyed connector; if it doesn't slide on easily, you're trying it backwards. Don't force it.
 
 ## Code
 
@@ -76,7 +76,7 @@ Because your ESP32 Plus shield has **G / V / S headers on every pin**, all three
 
 Drag these blocks together in the workspace:
 
-![DHT11 blocks — read temperature & humidity and print them](../../images/placeholder.svg)
+![DHT11 blocks: read temperature & humidity and print them](../../images/placeholder.svg)
 
 **Block-by-block:**
 
@@ -141,7 +141,7 @@ Humidity: 62.00
 ```
 
 !!! tip "Breathe on the sensor"
-    Your breath is warm and humid. Hold the DHT11 close to your mouth and breathe out — you should see the humidity number jump up within a couple of readings. This is a great way to confirm the sensor is really working and not just showing a stuck value.
+    Your breath is warm and humid. Hold the DHT11 close to your mouth and breathe out. You should see the humidity number jump up within a couple of readings. This is a great way to confirm the sensor is really working and not just showing a stuck value.
 
 ## Try it!
 
@@ -164,7 +164,7 @@ Humidity: 62.00
     Update the display every 2 seconds.
 
 !!! question "Challenge 3 · The first step toward a Weather Station"
-    Combine the two challenges above. You've just built the core of the [Weather Station project](build.md) — read it to see what one more piece of logic gets you.
+    Combine the two challenges above. You've just built the core of the [Weather Station project](build.md). Read it to see what one more piece of logic gets you.
 
 ## What's next?
 

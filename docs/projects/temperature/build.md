@@ -7,7 +7,7 @@ pillar: temperature
 !!! abstract "At a glance"
     **What you'll build:** a small weather station that measures the temperature and humidity of the room, shows the readings on an LCD display, and flashes an LED when the temperature gets too high.
 
-    **Smart-city pillar:** 🌿 Smart Environment & Climate Monitoring — in a real city, hundreds of these sensors feed data into air-quality monitoring and climate-adaptation systems.
+    **Smart-city pillar:** 🌿 Smart Environment & Climate Monitoring. In a real city, hundreds of these sensors feed data into air-quality monitoring and climate-adaptation systems.
 
     **Prerequisites:** [DHT11 lesson](dht11.md), [LCD lesson](lcd.md), [White LED lesson](../agriculture/led.md).
 
@@ -17,7 +17,7 @@ pillar: temperature
 
 ## Overview
 
-Modern cities operate **networks of environmental sensors** — on streetlight poles, on buildings, in parks. The data they collect shapes decisions about traffic (ozone alerts), public health (heatwave warnings), and infrastructure design (which neighbourhoods need more shade trees).
+Modern cities operate **networks of environmental sensors**: on streetlight poles, on buildings, in parks. The data they collect shapes decisions about traffic (ozone alerts), public health (heatwave warnings), and infrastructure design (which neighbourhoods need more shade trees).
 
 In this project you'll build a single node of that network. Your weather station:
 
@@ -29,7 +29,7 @@ Once this is working, **Part 4** will show you how to send those same readings t
 
 ## Components needed
 
-Everything on this list is in your Brilliant Smart City Kit — no breadboard or extra wires needed.
+Everything on this list is in your Brilliant Smart City Kit: no breadboard or extra wires needed.
 
 | Component | Quantity | From your kit |
 |-----------|----------|---------------|
@@ -61,7 +61,7 @@ Everything on this list is in your Brilliant Smart City Kit — no breadboard or
 
 Three 3-pin Dupont cables, three sensor modules, three plug-in connections. That's it.
 
-![Weather Station — DHT11, LCD, and LED plugged into the ESP32 Plus shield](../../images/placeholder.svg)
+![Weather Station: DHT11, LCD, and LED plugged into the ESP32 Plus shield](../../images/placeholder.svg)
 
 | Sensor | ESP32 Plus pin |
 |--------|----------------|
@@ -80,17 +80,17 @@ Three 3-pin Dupont cables, three sensor modules, three plug-in connections. That
 </ol>
 
 !!! warning "Disconnect USB before wiring"
-    You know the drill by now — unplug, wire, plug back in.
+    You know the drill by now: unplug, wire, plug back in.
 
 ## Step-by-step code
 
-Rather than writing the whole program in one go, build it in **three stages** and test after each. This is how real engineers work — it isolates bugs quickly.
+Rather than writing the whole program in one go, build it in **three stages** and test after each. This is how real engineers work: it isolates bugs quickly.
 
 ### Stage 1 · Read and print the DHT11
 
 This is exactly the program from the [DHT11 lesson](dht11.md). We start here to confirm the sensor is wired correctly before adding the LCD and LED.
 
-![Stage 1 blocks — DHT11 only, print to serial](../../images/placeholder.svg)
+![Stage 1 blocks: DHT11 only, print to serial](../../images/placeholder.svg)
 
 **Test it:** upload, open Serial Monitor, confirm you see temperature and humidity numbers that move when you breathe on the sensor.
 
@@ -99,9 +99,9 @@ This is exactly the program from the [DHT11 lesson](dht11.md). We start here to 
 
 ### Stage 2 · Show the readings on the LCD
 
-Now replace the *serial print* blocks with LCD blocks. Your program is still just reading and displaying — no logic yet.
+Now replace the *serial print* blocks with LCD blocks. Your program is still just reading and displaying, with no logic yet.
 
-![Stage 2 blocks — same readings, now sent to LCD](../../images/placeholder.svg)
+![Stage 2 blocks: same readings, now sent to LCD](../../images/placeholder.svg)
 
 **What's new:**
 
@@ -115,13 +115,13 @@ Now replace the *serial print* blocks with LCD blocks. Your program is still jus
 **Test it:** upload, watch the LCD. It should update every 2 seconds.
 
 !!! info "LCD shows garbled characters or nothing at all?"
-    The I²C address might not be `0x27`. Try `0x3F` instead — those are the two common defaults. If neither works, see [Troubleshooting](../../reference/troubleshooting.md).
+    The I²C address might not be `0x27`. Try `0x3F` instead; those are the two common defaults. If neither works, see [Troubleshooting](../../reference/troubleshooting.md).
 
 ### Stage 3 · Add the temperature alert
 
-Now we add **decision logic** — the ESP32 has to *think* about the reading and do something different based on it.
+Now we add **decision logic**: the ESP32 has to *think* about the reading and do something different based on it.
 
-![Stage 3 blocks — full program with if/else for LED](../../images/placeholder.svg)
+![Stage 3 blocks: full program with if/else for LED](../../images/placeholder.svg)
 
 **What's new:**
 
@@ -145,7 +145,7 @@ If all five boxes check, **you've built a working smart-city environment node.**
 
 ## Extend it
 
-Pick one of these and make it yours — this kind of creativity is exactly what the BGC judges look for.
+Pick one of these and make it yours. This kind of creativity is exactly what the BGC judges look for.
 
 !!! question "Extension 1 · Multi-threshold warning"
     Add a **buzzer**. Design a three-tier alert:
@@ -155,7 +155,7 @@ Pick one of these and make it yours — this kind of creativity is exactly what 
     - > 30 °C: LED flashing + buzzer beeping
 
 !!! question "Extension 2 · Humidity tracking"
-    Warn when humidity drops below 30 % (too dry — uncomfortable for people) or rises above 70 % (too humid — risk of mould). Use the LCD second line to display the warning text.
+    Warn when humidity drops below 30 % (too dry, uncomfortable for people) or rises above 70 % (too humid, risk of mould). Use the LCD second line to display the warning text.
 
 !!! question "Extension 3 · Historical max/min"
     Create two variables, `max_temp` and `min_temp`, that remember the highest and lowest temperatures seen since the program started. Show them on an extra screen that appears every 10 seconds.

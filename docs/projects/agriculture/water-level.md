@@ -5,7 +5,7 @@ pillar: agriculture
 # Water Level Detector
 
 !!! abstract "At a glance"
-    **Category:** Smart Agriculture — measures depth of water in the tank
+    **Category:** Smart Agriculture: measures depth of water in the tank
     **In your kit:** ×1
     **Time:** about 20 minutes
 
@@ -13,13 +13,13 @@ pillar: agriculture
 
 ## What is it?
 
-The Water Level Detector is a flat sensor with comb-shaped traces of exposed copper. When water touches the traces, it bridges them and changes the resistance — the more of the sensor that's submerged, the lower the resistance. Your ESP32 reads this as an analog number: **deeper water → higher reading.**
+The Water Level Detector is a flat sensor with comb-shaped traces of exposed copper. When water touches the traces, it bridges them and changes the resistance; the more of the sensor that's submerged, the lower the resistance. Your ESP32 reads this as an analog number: **deeper water → higher reading.**
 
 In the **Smart Agriculture** project, this sensor measures how much water is in the tank that feeds the pump. **Empty tank → don't run the pump (or it will burn out).** That's the safety check.
 
 ## How it works
 
-The sensor has 10 horizontal copper lines, alternating between two sets — a "drive" set and a "sense" set. When water sits on the sensor, it creates a conductive path between the drive and sense sets. More water = more parallel paths = lower resistance = higher analog reading.
+The sensor has 10 horizontal copper lines, alternating between two sets: a "drive" set and a "sense" set. When water sits on the sensor, it creates a conductive path between the drive and sense sets. More water = more parallel paths = lower resistance = higher analog reading.
 
 | Water level | Approximate reading |
 |-------------|--------------------:|
@@ -37,7 +37,7 @@ The sensor has 10 horizontal copper lines, alternating between two sets — a "d
 |----------|-------|
 | Operating Voltage | 3.3 V – 5 V |
 | Output type | Analog |
-| Reading range | 0 (dry) — ~3000 (fully submerged) |
+| Reading range | 0 (dry) to ~3000 (fully submerged) |
 | Detection length | About 40 mm |
 
 ## Pin layout
@@ -50,7 +50,7 @@ The sensor has 10 horizontal copper lines, alternating between two sets — a "d
 
 ## Wiring
 
-![Water Level Detector wired to ESP32 Plus IO 33 — yellow signal, red VCC, black ground](../../images/projects/agriculture/water-level-wiring.webp)
+![Water Level Detector wired to ESP32 Plus IO 33, yellow signal, red VCC, black ground](../../images/projects/agriculture/water-level-wiring.webp)
 
 **Step by step:**
 
@@ -69,7 +69,7 @@ The sensor has 10 horizontal copper lines, alternating between two sets — a "d
 
 Drag these blocks into your workspace:
 
-![Water level code blocks — read sensor on IO 33, print to serial monitor every 2 seconds](../../images/placeholder.svg)
+![Water level code blocks, read sensor on IO 33, print to serial monitor every 2 seconds](../../images/placeholder.svg)
 
 **Block-by-block:**
 
@@ -87,7 +87,7 @@ Drag these blocks into your workspace:
 1. Click **Upload**.
 2. Open the **Serial Monitor** (115200 baud).
 3. Slowly pour water into the container until it reaches the bottom of the sensor. The reading jumps from 0 to a few hundred.
-4. Pour more water — the reading climbs as the water rises.
+4. Pour more water and the reading climbs as the water rises.
 
 ## Expected result
 
@@ -100,15 +100,15 @@ Water level: 2740    ← sensor fully submerged
 ```
 
 !!! tip "Test progression"
-    Don't just dump water in — **pour slowly** and watch the reading climb. Confirming that the number changes smoothly is the best proof the sensor works correctly.
+    Don't just dump water in. **Pour slowly** and watch the reading climb. Confirming that the number changes smoothly is the best proof the sensor works correctly.
 
 ## Try it!
 
 !!! question "Challenge 1 · Find your 'low water' threshold"
-    For the agriculture project, you want to know when the tank is "almost empty." Fill the tank to *just below* the level where the pump can no longer suck water out. Note the reading — that's your low-water threshold.
+    For the agriculture project, you want to know when the tank is "almost empty." Fill the tank to *just below* the level where the pump can no longer suck water out. Note the reading; that's your low-water threshold.
 
 !!! question "Challenge 2 · Combine with the LED"
-    **IF water level < 500 → LED on (low water warning)**. This is exactly the second half of the Smart Agriculture project's logic — combining sensor + actuator.
+    **IF water level < 500 → LED on (low water warning)**. This is exactly the second half of the Smart Agriculture project's logic: combining sensor + actuator.
 
 !!! question "Challenge 3 · Both sensors at once"
     You now have two analog readings: soil moisture (IO 32) and water level (IO 33). Print both on the same line in the Serial Monitor: `Soil: 1850  |  Water: 720`. Multi-sensor monitoring is what real IoT systems do all day.

@@ -4,15 +4,15 @@ The most common problems students hit while working through this tutorial, and h
 
 ## Flowlence Code won't install
 
-**Windows SmartScreen blocks the installer.** Windows shows a "Microsoft Defender SmartScreen prevented an unrecognised app from starting" warning. Click **More info** → **Run anyway**. This happens because Flowlence Code is a new app without a widespread reputation yet. See [Install Flowlence Code](../getting-started/install.md) for details.
+**Windows SmartScreen blocks the installer.** Windows shows a "Microsoft Defender SmartScreen prevented an unrecognised app from starting" warning. Click **More info** → **Run anyway**. SmartScreen shows this notice for any specialized software that isn't shipped through the Microsoft Store. See [Install Flowlence Code](../getting-started/install.md) for details.
 
 ## Can't connect to the ESP32
 
 **No COM port appears when I plug in the ESP32.**
 
-1. Try a different USB cable — many charging-only cables don't carry data.
+1. Try a different USB cable; many charging-only cables don't carry data.
 2. Try a different USB port, preferably directly on the computer (not through a hub).
-3. Install the USB driver. Flowlence Code includes one in the `drivers/` folder — run `install_x64.bat` (Windows) as administrator.
+3. Install the USB driver. Flowlence Code includes one in the `drivers/` folder; run `install_x64.bat` (Windows) as administrator.
 
 **The COM port appears but upload fails.**
 
@@ -21,7 +21,7 @@ The most common problems students hit while working through this tutorial, and h
 
 ## Flowlence Code shows "update stuck at 17%"
 
-This is the **external-resources updater**, not the installer. It can happen when the version in `config.json` doesn't match the release tag on the update server. If you see this, report the version number shown to Flowlence support — they'll tell you how to recover. You can continue using the app with the last working extensions in the meantime.
+This is the **external-resources updater**, not the installer. It can happen when the version in `config.json` doesn't match the release tag on the update server. If you see this, report the version number shown to Flowlence support; they'll tell you how to recover. You can continue using the app with the last working extensions in the meantime.
 
 ## My sensor gives weird readings
 
@@ -35,7 +35,7 @@ Using a resistor that's too large (above 220 Ω) will make the LED dim. Using on
 
 ## Blocks are disconnected and my program does nothing
 
-Every program needs a starting block — either *when Arduino begin* (runs once) or *forever* (runs continuously). Blocks that aren't snapped under a starting block are ignored. Look for orphan stacks in your workspace and delete or reconnect them.
+Every program needs a starting block, either *when Arduino begin* (runs once) or *forever* (runs continuously). Blocks that aren't snapped under a starting block are ignored. Look for orphan stacks in your workspace and delete or reconnect them.
 
 ## The generated code panel is empty / red
 

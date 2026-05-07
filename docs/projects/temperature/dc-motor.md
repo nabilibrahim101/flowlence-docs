@@ -25,7 +25,7 @@ A small brushed DC motor mounted on a driver module. Your ESP32 can turn it on, 
 
 ## What you'll build with it
 
-- Cooling fan for a smart climate project (pairs with DHT11 — turn on when it's hot)
+- Cooling fan for a smart climate project (pairs with DHT11: turn on when it's hot)
 - Wind turbine animation (pairs with the Solar Panel)
 - Simple motorised vehicle
 

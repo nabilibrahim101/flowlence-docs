@@ -2,7 +2,7 @@
 
 This guide will walk you through the main areas of the Flowlence Code interface.
 
-![Interface Overview](../images/placeholder.svg)
+![Flowlence Code's workspace, with blocks panel on the left and the BGC watermark in the centre](../images/getting-started/install/06-empty-flowlence-code.png)
 
 ## Main Areas
 

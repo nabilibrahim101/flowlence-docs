@@ -5,7 +5,7 @@ pillar: parking
 # Build the Smart Parking System
 
 !!! abstract "At a glance"
-    **What you'll build:** a single parking-spot prototype — a distance sensor watches for a car, a "spot taken" LED lights up when it's occupied, and a servo gate opens *only* when an authorized RFID card is scanned.
+    **What you'll build:** a single parking-spot prototype. A distance sensor watches for a car, a "spot taken" LED lights up when it's occupied, and a servo gate opens *only* when an authorized RFID card is scanned.
 
     **Smart-city pillar:** 🚦 Smart Mobility & Traffic Systems
 
@@ -22,7 +22,7 @@ Two independent behaviours running in one program:
 1. **Spot detection.** The ultrasonic sensor sits over the parking spot and constantly measures the distance to whatever's beneath it. Empty spot → distance to ground (large). Car parked → distance to car roof (small). The system decides "taken" or "empty" and lights the LED accordingly.
 2. **Authorized gate access.** The RFID reader watches for tagged cards. When an *authorized* card taps the reader, the servo opens the gate for 5 seconds, then closes it. Unauthorized cards (or no card) → gate stays closed.
 
-In a real lot, you'd have many spots and many gates — your prototype is one of each.
+In a real lot, you'd have many spots and many gates; your prototype is one of each.
 
 ## Components needed
 
@@ -43,12 +43,12 @@ All from your Brilliant Smart City Kit.
 
 Plug each module's 3-pin cable into the matching G/V/S header on your ESP32 Plus shield at the pin numbers below.
 
-![Smart Parking wiring — Ultrasonic, Servo, RFID, and White LED on the ESP32 Plus shield](../../images/placeholder.svg)
+![Smart Parking wiring: Ultrasonic, Servo, RFID, and White LED on the ESP32 Plus shield](../../images/placeholder.svg)
 
 | Sensor | ESP32 Plus pin |
 |--------|----------------|
-| Ultrasonic — TRIG | **IO 12** |
-| Ultrasonic — ECHO | **IO 13** |
+| Ultrasonic (TRIG) | **IO 12** |
+| Ultrasonic (ECHO) | **IO 13** |
 | Servo Motor | **IO 14** |
 | RFID Reader | **I²C header** (SDA / SCL near top of board) |
 | White LED | **IO 5** |
@@ -58,13 +58,13 @@ Plug each module's 3-pin cable into the matching G/V/S header on your ESP32 Plus
 
 ## Step-by-step code
 
-We'll build this in **three stages**. Test after each stage before moving on — that way if something breaks you'll know exactly which piece caused it.
+We'll build this in **three stages**. Test after each stage before moving on, so if something breaks you'll know exactly which piece caused it.
 
 ### Stage 1 · Spot detection (ultrasonic + LED)
 
 This stage proves the basic sense → decide → act loop.
 
-![Stage 1 blocks — Ultrasonic reading lights the White LED when a car is detected](../../images/placeholder.svg)
+![Stage 1 blocks: Ultrasonic reading lights the White LED when a car is detected](../../images/placeholder.svg)
 
 **The block-by-block:**
 
@@ -76,27 +76,27 @@ This stage proves the basic sense → decide → act loop.
 | `forever` | Repeat forever |
 | `set var distance to (read ultrasonic distance cm)` | Read the sensor |
 | `if (distance < 10) then ... else ...` | Decision threshold (10 cm) |
-| `set pin 5 to HIGH` (in `then`) | LED on — spot taken |
-| `set pin 5 to LOW` (in `else`) | LED off — spot empty |
+| `set pin 5 to HIGH` (in `then`) | LED on: spot taken |
+| `set pin 5 to LOW` (in `else`) | LED off: spot empty |
 | `wait 0.2 seconds` | Don't poll too fast |
 
-**Test it:** upload, then move your hand close to and away from the ultrasonic sensor. The LED should follow — close = on, far = off. If it never turns on, lower the threshold; if it stays on, raise it.
+**Test it:** upload, then move your hand close to and away from the ultrasonic sensor. The LED should follow: close = on, far = off. If it never turns on, lower the threshold; if it stays on, raise it.
 
 !!! tip "Why 10 cm?"
-    A real parked car is much closer to a ceiling-mounted sensor than 10 cm — but for your tabletop prototype, you'll be using your hand or a small object as the "car." Tune the threshold to whatever distance feels natural.
+    A real parked car is much closer to a ceiling-mounted sensor than 10 cm, but for your tabletop prototype, you'll be using your hand or a small object as the "car." Tune the threshold to whatever distance feels natural.
 
 ### Stage 2 · Add the gate (servo)
 
 Now add the servo motor as a gate. We'll have it default to closed, and we'll prepare a "open then close" routine that future code will trigger.
 
-![Stage 2 blocks — Spot detection plus servo gate that opens for 5 seconds](../../images/placeholder.svg)
+![Stage 2 blocks: Spot detection plus servo gate that opens for 5 seconds](../../images/placeholder.svg)
 
 **What's new:**
 
 | Block | What it does |
 |-------|--------------|
 | `init servo on IO14` | Tell Flowlence the servo's pin |
-| `set servo IO14 to angle 0` | Default position — gate closed |
+| `set servo IO14 to angle 0` | Default position: gate closed |
 | Custom block: `Open the gate` | Sets servo to 90°, waits 5s, returns to 0° |
 
 For now, manually trigger the gate by pressing a button block, or just to test, drop the "Open the gate" call inside the loop temporarily so it cycles.
@@ -105,9 +105,9 @@ For now, manually trigger the gate by pressing a button block, or just to test, 
 
 ### Stage 3 · Authorized access (RFID)
 
-Final stage — the gate only opens for cards we've authorized. You'll need to first read the IDs of your kit's RFID cards so you know which ones to allow.
+Final stage: the gate only opens for cards we've authorized. You'll need to first read the IDs of your kit's RFID cards so you know which ones to allow.
 
-![Stage 3 blocks — Full system with RFID-authorized gate access](../../images/placeholder.svg)
+![Stage 3 blocks: Full system with RFID-authorized gate access](../../images/placeholder.svg)
 
 **Two-step build:**
 
@@ -131,7 +131,7 @@ If all five boxes check, **you've built a working smart-city parking node.** �
 
 ## Extend it
 
-Pick one and run with it — the BGC judges value extensions over polish.
+Pick one and run with it. The BGC judges value extensions over polish.
 
 !!! question "Extension 1 · Multi-spot lot"
     Use the second ultrasonic sensor and another LED to add a second spot. Show *both* statuses on an LCD: "Spot 1: TAKEN  /  Spot 2: FREE."

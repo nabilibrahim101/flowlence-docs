@@ -5,7 +5,7 @@ pillar: agriculture
 # Soil Moisture Probe
 
 !!! abstract "At a glance"
-    **Category:** Smart Agriculture — measures how wet the soil is
+    **Category:** Smart Agriculture: measures how wet the soil is
     **In your kit:** ×1
     **Time:** about 20 minutes
 
@@ -15,13 +15,13 @@ pillar: agriculture
 
 The Soil Moisture Probe is a two-pronged sensor that you push into soil. It measures how much water is between the prongs and reports that as an analog number to your ESP32. **Wetter soil → lower number. Drier soil → higher number.**
 
-![Soil Moisture Probe — two metal prongs and a small breakout board with G/V/S pins](../../images/projects/agriculture/soil-moisture-sensor.webp){ width="380" }
+![Soil Moisture Probe, two metal prongs and a small breakout board with G/V/S pins](../../images/projects/agriculture/soil-moisture-sensor.webp){ width="380" }
 
 In the **Smart Agriculture** project, this is the sensor that decides *when to water*. Your code reads the moisture value, decides if the soil is too dry, and (if the water tank also has water) turns the pump on.
 
 ## How it works
 
-The two prongs are electrodes — tiny exposed metal pads. When the soil between them is wet, water carries a small electrical current from one prong to the other. The drier the soil, the harder it is for current to flow.
+The two prongs are electrodes, tiny exposed metal pads. When the soil between them is wet, water carries a small electrical current from one prong to the other. The drier the soil, the harder it is for current to flow.
 
 The module measures this resistance and converts it to an **analog voltage** between 0 V and 3.3 V. The ESP32 reads this voltage as a number from **0 (saturated wet) to 4095 (bone dry)**.
 
@@ -34,7 +34,7 @@ The module measures this resistance and converts it to an **analog voltage** bet
 |----------|-------|
 | Operating Voltage | 3.3 V – 5 V |
 | Output type | Analog |
-| Reading range | 0 (very wet) — 4095 (very dry) |
+| Reading range | 0 (very wet) to 4095 (very dry) |
 | Sensitive area | Just the bottom 2 cm of the prongs |
 
 ## Pin layout
@@ -46,11 +46,11 @@ The module measures this resistance and converts it to an **analog voltage** bet
 | **G** (Ground) | G on the same header | ⚫ Black |
 
 !!! warning "IO 32 is input-only"
-    On the ESP32, pins 32, 34, 35, 36, and 39 can only be **read** from, never written to. That's perfect for a sensor — you only ever read it. Don't try to "set IO 32 to HIGH" later; it won't do anything.
+    On the ESP32, pins 32, 34, 35, 36, and 39 can only be **read** from, never written to. That's perfect for a sensor: you only ever read it. Don't try to "set IO 32 to HIGH" later; it won't do anything.
 
 ## Wiring
 
-![Soil Moisture Probe wired to ESP32 Plus IO 32 — yellow signal, red VCC, black ground](../../images/projects/agriculture/soil-moisture-wiring.webp)
+![Soil Moisture Probe wired to ESP32 Plus IO 32, yellow signal, red VCC, black ground](../../images/projects/agriculture/soil-moisture-wiring.webp)
 
 **Step by step:**
 
@@ -69,7 +69,7 @@ The module measures this resistance and converts it to an **analog voltage** bet
 
 Drag these blocks into your workspace:
 
-![Soil moisture code blocks — read sensor on IO 32, print to serial monitor every 2 seconds](../../images/placeholder.svg)
+![Soil moisture code blocks, read sensor on IO 32, print to serial monitor every 2 seconds](../../images/placeholder.svg)
 
 **Block-by-block:**
 
@@ -113,7 +113,7 @@ Moisture: 380    ← prongs dipped in a glass of water
     What reading does *your* soil give when the plant clearly needs water? Push the prongs in and write down the number. That's *your* "dry" threshold for the agriculture project.
 
 !!! question "Challenge 2 · Add a label"
-    Print a friendlier message: instead of just `Moisture: 1850`, print `Moisture: 1850 — soil is damp` or `Moisture: 4040 — soil is dry`. Use an `if` block to choose the message based on the reading.
+    Print a friendlier message: instead of just `Moisture: 1850`, print `Moisture: 1850 (soil is damp)` or `Moisture: 4040 (soil is dry)`. Use an `if` block to choose the message based on the reading.
 
 !!! question "Challenge 3 · Looking ahead"
     Combine this with the LED you built earlier: **IF moisture > 3000 → LED on (warning: too dry)**. That's the first half of the Smart Agriculture decision logic.

@@ -3,7 +3,7 @@
 Before you dive into sensors, let's make sure you're comfortable with the block editor itself. Every lesson from here on assumes you know how to do the four things on this page.
 
 !!! tip "You can skip this page if you've used Scratch before"
-    Flowlence Code works almost identically to Scratch. If you can build a Scratch program, you can build a Flowlence program — just jump to [Pin Map & Wiring Conventions](pin-map.md).
+    Flowlence Code works almost identically to Scratch. If you can build a Scratch program, you can build a Flowlence program. Just jump to [Pin Map & Wiring Conventions](pin-map.md).
 
 ## 1. Find a block in the toolbox
 
@@ -48,12 +48,12 @@ When your program is ready, click the **green Upload button** at the top right. 
 
 ## Quick vocabulary check
 
-- **Block** — a single coloured shape you drag into the workspace.
-- **Stack** — two or more blocks snapped together.
-- **Script** — the full program, usually starting from a *when Arduino begin* block.
-- **Toolbox** — the palette on the left.
-- **Workspace** — the grey area in the middle where you build.
-- **Code Panel** — the text on the right showing the generated Arduino C++.
+- **Block**: a single coloured shape you drag into the workspace.
+- **Stack**: two or more blocks snapped together.
+- **Script**: the full program, usually starting from a *when Arduino begin* block.
+- **Toolbox**: the palette on the left.
+- **Workspace**: the grey area in the middle where you build.
+- **Code Panel**: the text on the right showing the generated Arduino C++.
 
 If anything on this list is confusing, ask your teacher before moving on.
 

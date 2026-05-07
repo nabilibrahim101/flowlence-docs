@@ -7,7 +7,7 @@ pillar: agriculture
 !!! abstract "At a glance"
     **What you'll build:** the full self-watering plant system. The soil-moisture probe watches the dirt, the water-level detector watches the tank, and the relay-controlled pump waters the plant *only* when both conditions are right. An LED warns when the tank runs low.
 
-    **Smart-city pillar:** 🌿 Sustainability — Smart Irrigation & Water Management
+    **Smart-city pillar:** 🌿 Sustainability: Smart Irrigation & Water Management
 
     **Prerequisites:** [White LED](led.md), [Soil Moisture Probe](soil-moisture.md), [Water Level Detector](water-level.md), [Water Pump (with Relay)](water-pump.md).
 
@@ -17,10 +17,10 @@ pillar: agriculture
 
 ## Overview
 
-Real smart-irrigation systems combine *sensor* readings with *safety* logic to decide when to water. Watering on a fixed schedule wastes water — instead, the system reads the actual conditions and acts accordingly. Your build does the same, with two safety rules:
+Real smart-irrigation systems combine *sensor* readings with *safety* logic to decide when to water. Watering on a fixed schedule wastes water; instead, the system reads the actual conditions and acts accordingly. Your build does the same, with two safety rules:
 
-- **Don't water if the soil is already wet** — that's wasteful and can drown the plant.
-- **Don't run the pump if the tank is empty** — the pump is water-cooled and will burn out within a minute if it runs dry.
+- **Don't water if the soil is already wet**: that's wasteful and can drown the plant.
+- **Don't run the pump if the tank is empty**: the pump is water-cooled and will burn out within a minute if it runs dry.
 
 So the decision logic uses two sensors at once before running the pump. The LED warns when the tank needs refilling.
 
@@ -45,7 +45,7 @@ All from your Brilliant Smart City Kit.
 
 The full system has four sensor/actuator modules connected to the ESP32 Plus, plus the pump itself running through the relay's terminal block.
 
-![Full Smart Agriculture wiring — Soil Moisture, Water Level, LED, and Relay+Pump on the ESP32 Plus](../../images/projects/agriculture/agriculture-full-wiring.webp)
+![Full Smart Agriculture wiring: Soil Moisture, Water Level, LED, and Relay+Pump on the ESP32 Plus](../../images/projects/agriculture/agriculture-full-wiring.webp)
 
 | Module | ESP32 Plus pin |
 |--------|----------------|
@@ -59,7 +59,7 @@ The full system has four sensor/actuator modules connected to the ESP32 Plus, pl
     Always unplug, wire, plug back in. Moving wires while powered can short pins and damage the board.
 
 !!! danger "Submerge the pump before powering on"
-    The pump is water-cooled — running it dry damages it within a minute. **Fill the tank first**, drop the pump in, then plug in the USB cable.
+    The pump is water-cooled; running it dry damages it within a minute. **Fill the tank first**, drop the pump in, then plug in the USB cable.
 
 ## How it works
 
@@ -98,11 +98,11 @@ In IF/THEN logic:
 
 ## Step-by-step code
 
-Build this in **three stages**. Test each stage before adding the next — that way if something breaks you'll know which addition caused it.
+Build this in **three stages**. Test each stage before adding the next, so if something breaks you'll know which addition caused it.
 
 ### Stage 1 · Read the two sensors
 
-This stage proves both analog readings work before you add any logic. No pump, no LED — just print the numbers.
+This stage proves both analog readings work before you add any logic. No pump, no LED: just print the numbers.
 
 **The block-by-block:**
 
@@ -120,25 +120,25 @@ This stage proves both analog readings work before you add any logic. No pump, n
 
 ### Stage 2 · Add the low-water warning LED
 
-Now add the simplest piece of logic — turn the LED on when the tank is empty.
+Now add the simplest piece of logic: turn the LED on when the tank is empty.
 
 **What's new:**
 
 | Block | What it does |
 |-------|--------------|
 | `if (level < 500) then ... else ...` | Decision: is the tank low? |
-| `set LED on pin GPIO 27 to ON` (in `then`) | LED on — refill the tank |
-| `set LED on pin GPIO 27 to OFF` (in `else`) | LED off — tank OK |
+| `set LED on pin GPIO 27 to ON` (in `then`) | LED on: refill the tank |
+| `set LED on pin GPIO 27 to OFF` (in `else`) | LED off: tank OK |
 
 **Test it:** with the water sensor dry, the LED should be on. Pour water until the sensor's bottom is submerged → LED goes off. If the LED stays on with water present, lower the threshold (try 300 instead of 500).
 
 ### Stage 3 · Add the pump with full safety logic
 
-Final stage — the pump runs only when the soil is dry **and** the tank has enough water.
+Final stage: the pump runs only when the soil is dry **and** the tank has enough water.
 
 Here's the full program with all three stages combined:
 
-![Smart Agriculture full code — variables, sensor reads, full decision tree with LED warning and pump control all wired up](../../images/projects/agriculture/full-code.png)
+![Smart Agriculture full code: variables, sensor reads, full decision tree with LED warning and pump control all wired up](../../images/projects/agriculture/full-code.png)
 
 **The full decision logic:**
 
@@ -173,13 +173,13 @@ If all five boxes check, **you've built a working smart-irrigation system.** �
 
 ## Extend it
 
-Pick one and run with it — the BGC judges value extensions over polish.
+Pick one and run with it. The BGC judges value extensions over polish.
 
 !!! question "Extension 1 · Tunable thresholds"
-    Hard-coded thresholds (`level < 500`, `moisture > 3000`) work for *your* setup but might be wrong for someone else's plant or soil type. Use *variables* at the top of your program — `dry_threshold`, `low_water_threshold` — so they're easy to adjust at the top of the code.
+    Hard-coded thresholds (`level < 500`, `moisture > 3000`) work for *your* setup but might be wrong for someone else's plant or soil type. Use *variables* at the top of your program (`dry_threshold`, `low_water_threshold`) so they're easy to adjust.
 
 !!! question "Extension 2 · Watering log"
-    Every time the pump runs, print a line to the Serial Monitor with the moisture reading and a "watered!" message. After running for an hour, count how many times the system watered — that's a real engineering log.
+    Every time the pump runs, print a line to the Serial Monitor with the moisture reading and a "watered!" message. After running for an hour, count how many times the system watered. That's a real engineering log.
 
 !!! question "Extension 3 · Variable pump duration"
     If the soil is *very* dry (moisture > 3800), pump for 5 seconds. If only mildly dry (3000–3800), pump for 2 seconds. Tune the watering amount to actual need.

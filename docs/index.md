@@ -17,7 +17,7 @@ hide:
 
 <div class="flowlence-hero__image" markdown>
 <div class="flowlence-hero__image-frame">
-<img src="images/city-model.png" alt="A student-built smart city model with four zones — agriculture, parking, safety, and climate — each wired to the ESP32 Plus and the Brilliant Smart City Kit">
+<img src="images/city-model.png" alt="A student-built smart city model with four zones (agriculture, parking, safety, and climate), each wired to the ESP32 Plus and the Brilliant Smart City Kit">
 </div>
 <div class="flowlence-hero__image-tag">What students build</div>
 </div>
@@ -37,9 +37,9 @@ hide:
 
 ## Why you're here
 
-This tutorial is the technology companion for the **[Brilliant Global Competitions](https://bgc.education)** — global STEM competitions where students apply technology, engineering, science, mathematics, and creative design to solve real-world challenges. The 2026–2027 theme is **Smart Cities**: *Where Smart Vision Meets IoT-Driven Reality.*
+This tutorial is the technology companion for the **[Brilliant Global Competitions](https://bgc.education)**, global STEM competitions where students apply technology, engineering, science, mathematics, and creative design to solve real-world challenges. The 2026–2027 theme is **Smart Cities**: *Where Smart Vision Meets IoT-Driven Reality.*
 
-Students design and build a fully-functional Smart City model using industry-grade Internet of Things (IoT) sensors. National and Regional Champions compete at the **Global Championship in Washington, D.C.** — with a Global Champion experience that includes a 3-day NASA workshop and visits to MIT and Harvard.
+Students design and build a fully-functional Smart City model using real Internet of Things (IoT) sensors. National and Regional Champions compete at the **Global Championship in Washington, D.C.**, with a Global Champion experience that includes a 3-day NASA workshop and visits to MIT and Harvard.
 
 Your STEM teacher guides the urban-design and presentation pillars; **these pages cover the tech half**: the hardware in your kit, the block-based programming, and the projects themselves.
 
@@ -85,29 +85,29 @@ Each project maps to one of the four pillars that define real smart cities:
 
 | Pillar | What it covers | Your project |
 |--------|---------------|--------------|
-| 🌿 **Sustainability** — Smart Irrigation & Water Management | Water supply, irrigation, efficiency | [Smart Agriculture](projects/agriculture/index.md) |
-| 🚦 **Mobility** — Smart Mobility & Traffic Systems | Roads, parking, transit, gates | [Smart Parking](projects/parking/index.md) |
-| 🚨 **Protection** — Public Safety & Emergency Systems | Fire, gas, alarms, emergency response | [Smart Safety](projects/safety/index.md) |
-| 🌡️ **Comfort** — Smart Environment & Climate Monitoring | Air quality, temperature, climate-aware buildings | [Smart Temperature](projects/temperature/index.md) |
+| 🌿 **Sustainability**: Smart Irrigation & Water Management | Water supply, irrigation, efficiency | [Smart Agriculture](projects/agriculture/index.md) |
+| 🚦 **Mobility**: Smart Mobility & Traffic Systems | Roads, parking, transit, gates | [Smart Parking](projects/parking/index.md) |
+| 🚨 **Protection**: Public Safety & Emergency Systems | Fire, gas, alarms, emergency response | [Smart Safety](projects/safety/index.md) |
+| 🌡️ **Comfort**: Smart Environment & Climate Monitoring | Air quality, temperature, climate-aware buildings | [Smart Temperature](projects/temperature/index.md) |
 
 ## What you'll need
 
-- **Flowlence Code** — free download, installed on your computer ([Install guide](getting-started/install.md))
-- **Brilliant Smart City Kit** — ESP32 Plus board + the workshop sensors and modules ([Meet your kit](getting-started/meet-your-kit.md))
-- **A computer** — Windows 10 or later with a free USB port
+- **Flowlence Code**: free download, installed on your computer ([Install guide](getting-started/install.md))
+- **Brilliant Smart City Kit**: ESP32 Plus board + the workshop sensors and modules ([Meet your kit](getting-started/meet-your-kit.md))
+- **A computer**: Windows 10 or later with a free USB port
 
 ## How each Part is structured
 
 Every project Part follows the same three-step pattern:
 
-1. **Component lessons** — meet each sensor or actuator one at a time, learn how it works and how to read or control it
-2. **Build the system** — combine the components into a complete smart-city subsystem
-3. **Try the extensions** — open-ended challenges to make the project your own (judges love these)
+1. **Component lessons**: meet each sensor or actuator one at a time, learn how it works and how to read or control it
+2. **Build the system**: combine the components into a complete smart-city subsystem
+3. **Try the extensions**: open-ended challenges to make the project your own (judges love these)
 
 ## A word before you start
 
 !!! tip "Take it step by step"
-    If a block program isn't working, don't panic and don't add more blocks. Slow down, open the Serial Monitor, add a *serial print* to see what's actually happening. Debugging is 80% of the job — for real engineers too.
+    When something doesn't behave the way you expect, slow down and look closer. Open the Serial Monitor, add a *serial print* block, and watch what your program is actually doing. That's how every engineer figures things out, and it's the most important skill you'll build.
 
 !!! success "Ready?"
     [Start Part 1 :material-arrow-right:](getting-started/index.md){ .md-button .md-button--primary }

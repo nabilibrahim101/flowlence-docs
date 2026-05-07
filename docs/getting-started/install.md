@@ -9,11 +9,11 @@
 
 ## Download
 
-Click below to download the latest Windows version directly. The download starts as soon as you click — no extra page in between.
+Click below to download the latest Windows version directly. The download starts as soon as you click, with no extra page in between.
 
 [:material-download: Download Flowlence Code (Windows x64)](https://github.com/nabilibrahim101/flowlence-desktop/releases/latest/download/Flowlence_Code_win_x64.exe){ .md-button .md-button--primary }
 
-You'll get an installer file named **`Flowlence_Code_win_x64.exe`** (~506 MB). It's a single download — the ESP32 compiler, USB drivers, and sensor blocks all ship inside, so you're ready to build every project in this tutorial as soon as it finishes installing.
+You'll get an installer file named **`Flowlence_Code_win_x64.exe`** (~506 MB). It's a single download: the ESP32 compiler, USB drivers, and sensor blocks all ship inside, so you're ready to build every project in this tutorial as soon as it finishes installing.
 
 !!! tip "On a different platform?"
     Flowlence Code is Windows-only at the moment. Mac and Linux builds are on the roadmap. If you're on a Mac or Linux machine, your STEM teacher can help you find a Windows machine for the workshop.
@@ -25,7 +25,7 @@ Double-click the downloaded `.exe` to start the installer.
 !!! info "See a Windows SmartScreen warning?"
     Windows may show *"Microsoft Defender SmartScreen prevented an unrecognised app from starting"*.
 
-    Click **More info** → **Run anyway**. This happens because Flowlence Code is a new app without a widespread reputation yet — not because anything is wrong with the installer.
+    Click **More info** → **Run anyway**. SmartScreen shows this notice for any specialized software that isn't shipped through the Microsoft Store. The installer is safe.
 
 ## Step 2 · Choose who can use it
 
@@ -42,11 +42,11 @@ The default (`C:\Program Files\Flowlence Code`) works for most people. Click **I
 ![Choosing the install location, Destination Folder set to C:\Program Files\Flowlence Code](../images/getting-started/install/02-choose-location.png){ width="500" }
 
 !!! tip "1.7 GB needed"
-    Flowlence Code bundles compilers, drivers, firmware, and sensor extensions — that's why the install is around 1.7 GB. You only need this much space once; the installer doesn't keep growing as you use the app.
+    Flowlence Code bundles compilers, drivers, firmware, and sensor extensions, which is why the install is around 1.7 GB. You only need this much space once; the installer doesn't keep growing as you use the app.
 
 ## Step 4 · Wait for installation
 
-The installer copies Flowlence Code, the block editor, the ESP32 toolchain (compilers), sensor extensions, and USB drivers. **This can take several minutes** — especially the first time, because the full kit is large.
+The installer copies Flowlence Code, the block editor, the ESP32 toolchain (compilers), sensor extensions, and USB drivers. **This can take several minutes**, especially the first time, because the full kit is large.
 
 ![Installation in progress, green progress bar moving across](../images/getting-started/install/03-installing.png){ width="500" }
 
@@ -65,7 +65,7 @@ The first time Flowlence Code opens, it will check for the latest sensor blocks 
 Click **Update and restart**. The download takes 10–30 seconds depending on your internet speed.
 
 !!! info "Why is there an update on day one?"
-    Sensor blocks ship separately from the main app so we can add new sensors and fix block icons without you having to re-download the full installer. You'll see the same prompt occasionally as new sensors are added — always click **Update and restart**.
+    Sensor blocks ship separately from the main app so we can add new sensors and fix block icons without you having to re-download the full installer. You'll see the same prompt occasionally as new sensors are added. Always click **Update and restart**.
 
 ## Step 7 · You're in
 
@@ -74,7 +74,7 @@ After the restart, Flowlence Code opens to the workspace.
 ![Empty Flowlence Code workspace with the default sprite, blocks panel on the left, and the BGC watermark](../images/getting-started/install/06-empty-flowlence-code.png)
 
 !!! success "You're ready!"
-    If you see this screen — Flowlence Code's wordmark in the top-left, blocks on the left, and the BGC watermark in the workspace — the installation worked.
+    If you see this screen (Flowlence Code's wordmark in the top-left, blocks on the left, and the BGC watermark in the workspace), the installation worked.
 
     Next: [Tour the Interface](interface.md) to learn your way around, or jump straight to [Your First Program](first-program.md) to blink an LED.
 
