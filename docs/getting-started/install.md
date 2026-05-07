@@ -9,11 +9,10 @@
 
 ## Download
 
-Click below to download the latest Windows version directly. The download starts as soon as you click, with no extra page in between.
+!!! info "Download coming soon"
+    The Flowlence Code installer is being finalized for general release. A direct download link will appear here as soon as it's ready.
 
-[:material-download: Download Flowlence Code (Windows x64)](https://github.com/nabilibrahim101/flowlence-desktop/releases/latest/download/Flowlence_Code_win_x64.exe){ .md-button .md-button--primary }
-
-You'll get an installer file named **`Flowlence_Code_win_x64.exe`** (~506 MB). It's a single download: the ESP32 compiler, USB drivers, and sensor blocks all ship inside, so you're ready to build every project in this tutorial as soon as it finishes installing.
+    **Need it now?** Contact your RVP coordinator and they will share the installer with you directly.
 
 !!! tip "On a different platform?"
     Flowlence Code is Windows-only at the moment. Mac and Linux builds are on the roadmap. If you're on a Mac or Linux machine, your STEM teacher can help you find a Windows machine for the workshop.
