@@ -1,0 +1,2211 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutorials and guides for Flowlence Code - Block-based coding for the Brilliant IoT Smart City Workshop">
+      
+      
+        <meta name="author" content="Flowlence">
+      
+      
+        <link rel="canonical" href="https://learn.flowlence.com/superpowers/specs/2026-05-06-learn-flowlence-com-redesign-design/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>learn.flowlence.com co-brand redesign · design spec - Flowlence Learn</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+  
+      
+    
+  
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800;900&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+    
+      <link rel="stylesheet" href="../../../stylesheets/tokens.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/chrome.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/home.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/pillars.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/content.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#learnflowlencecom-co-brand-redesign-design-spec" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header"><label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label><a href="../../.." title="Flowlence Learn" class="md-header__title flowlence-lockup" data-md-component="header-title">
+      <span class="flowlence-lockup__bgc">bgc</span>
+      <span class="flowlence-lockup__divider" aria-hidden="true"></span>
+      <span class="flowlence-lockup__name">Flowlence Learn</span>
+    </a>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+  </nav><div class="flowlence-ribbon-line" aria-hidden="true"></div>
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../getting-started/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 · Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../projects/agriculture/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 · Smart Agriculture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../projects/parking/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 · Smart Parking
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../projects/safety/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 · Smart Safety
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../projects/temperature/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 5 · Smart Temperature
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../reference/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Flowlence Learn" class="md-nav__button md-logo" aria-label="Flowlence Learn" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Flowlence Learn
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 · Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 · Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/what-is-iot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What is IoT &amp; a Smart City?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/meet-your-kit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meet Your Kit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install Flowlence Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tour the Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/block-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Blocks Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/pin-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pin Map &amp; Shield Layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/first-program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your First Program
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../projects/agriculture/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 · Smart Agriculture
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 · Smart Agriculture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/agriculture/led/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    White LED
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/agriculture/soil-moisture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soil Moisture Probe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/agriculture/water-level/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Water Level Detector
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/agriculture/water-pump/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Water Pump (with Relay)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/agriculture/build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build the Smart Agriculture System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../projects/parking/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 · Smart Parking
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 · Smart Parking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/parking/ultrasonic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distance Sensor (Ultrasonic)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/parking/servo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Servo Motor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/parking/rfid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RFID Reader
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/parking/build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build the Smart Parking System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../projects/safety/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 · Smart Safety
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 · Smart Safety
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/safety/fire-detector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fire Detector
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/safety/gas-leak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gas Leak Sensor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/safety/active-buzzer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Active Buzzer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/safety/build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build the Smart Safety System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../projects/temperature/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5 · Smart Temperature
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 5 · Smart Temperature
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/temperature/dht11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temperature &amp; Humidity (DHT11)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/temperature/dc-motor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DC Motor (Fan)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/temperature/lcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LCD Display
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/temperature/build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build the Smart Temperature System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../reference/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="learnflowlencecom-co-brand-redesign-design-spec">learn.flowlence.com co-brand redesign · design spec<a class="headerlink" href="#learnflowlencecom-co-brand-redesign-design-spec" title="Permanent link">¶</a></h1>
+<p><strong>Date:</strong> 2026-05-06
+<strong>Status:</strong> approved through brainstorming, awaiting user review of this spec
+<strong>Implementation:</strong> to be planned via the <code>superpowers:writing-plans</code> skill after this spec is approved</p>
+<hr>
+<h2 id="1-goal">1. Goal<a class="headerlink" href="#1-goal" title="Permanent link">¶</a></h2>
+<p>Replace the current generic-MkDocs-Material visual identity of <code>learn.flowlence.com</code> with a polished co-branded design that reflects the Flowlence × BGC partnership. The partnership is contractually exclusive for 5 years: Flowlence builds and operates the site; BGC schools are its only audience; the same partnership will host Brilliant Academy curriculum once that product launches. The visual identity must read as <strong>both brands together</strong> without either dominating, and must scale beyond BGC competition material as Brilliant Academy expands the site's content.</p>
+<h2 id="2-constraints">2. Constraints<a class="headerlink" href="#2-constraints" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>No marketing-site palette drift.</strong> Flowlence's separate B2B work lives at <code>flowlence.com</code> and stays untouched. Decisions here only apply to <code>learn.flowlence.com</code>.</li>
+<li><strong>MkDocs Material as the substrate.</strong> We're customizing Material via <code>extra.css</code>, <code>extra_javascript</code>, <code>overrides/</code>, and per-page front matter. We are not switching to a different static-site generator.</li>
+<li><strong>Auto-deploy stays simple.</strong> Edits land at the live site within ~45 seconds via the existing GitHub Actions workflow. No new build steps that fight that loop.</li>
+<li><strong>Performance.</strong> All web fonts must load via Google Fonts (no self-hosted heavyweight assets). Total CSS additions stay under ~50 KB. No JS dependencies.</li>
+<li><strong>Direction:</strong> "Workshop" — energetic, student-facing, BGC tone forward. Not "Studio" (calm/Stripe-like) or "Atelier" (editorial/serif).</li>
+</ul>
+<h2 id="3-out-of-scope-this-spec">3. Out of scope (this spec)<a class="headerlink" href="#3-out-of-scope-this-spec" title="Permanent link">¶</a></h2>
+<ul>
+<li>Marketing copy rewrites (the spec defines tone, but actual rewrites of project pages happen in implementation chunks)</li>
+<li>New imagery / photography sourcing (we use the assets already in the repo: <code>city-model.png</code>, <code>brilliant-smart-city-kit.png</code>, the BGC wordmark)</li>
+<li>Internationalization</li>
+<li>A separate Brilliant Academy "skin" (the spec leaves room for it without building it)</li>
+</ul>
+<hr>
+<h2 id="4-section-1-brand-foundation">4. Section 1 · Brand foundation<a class="headerlink" href="#4-section-1-brand-foundation" title="Permanent link">¶</a></h2>
+<h3 id="41-palette-with-attribution">4.1 Palette · with attribution<a class="headerlink" href="#41-palette-with-attribution" title="Permanent link">¶</a></h3>
+<p>The palette splits into three zones. <strong>Each color belongs to exactly one zone</strong> — no overlap means no ambiguity about who owns what.</p>
+<h4 id="flowlence-owned-flowlence-">Flowlence-owned (<code>--flowlence-*</code>)<a class="headerlink" href="#flowlence-owned-flowlence-" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Hex</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--flowlence-orange</code></td>
+<td><code>#F7862F</code></td>
+<td>Flowlence-only accents (primary buttons, link underlines on Flowlence-only sections)</td>
+</tr>
+<tr>
+<td><code>--flowlence-cream</code></td>
+<td><code>#FFF7E6</code></td>
+<td>Background washes, hero backgrounds, soft surfaces</td>
+</tr>
+<tr>
+<td><code>--flowlence-slate</code></td>
+<td><code>#0F172A</code></td>
+<td>Text, dark-mode chrome, code-block background</td>
+</tr>
+</tbody>
+</table>
+<p>These are already in use on <code>flowlence.com</code> — not invented for this site.</p>
+<h4 id="shared-ribbon-ribbon-">Shared / Ribbon (<code>--ribbon-*</code>)<a class="headerlink" href="#shared-ribbon-ribbon-" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Definition</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--ribbon-gradient</code></td>
+<td><code>linear-gradient(90deg, #F7862F 0%, #F8568D 50%, #C026D3 100%)</code></td>
+<td>Hero emphasis lines, primary CTAs, header bottom-border, achievement moments</td>
+</tr>
+<tr>
+<td><code>--ribbon-gradient-soft</code></td>
+<td><code>linear-gradient(135deg, #FFF7E6 0%, #FFFFFF 50%, #FFE8F0 100%)</code></td>
+<td>Try-it card backgrounds, soft hero backgrounds</td>
+</tr>
+</tbody>
+</table>
+<p>The ribbon directly references BGC's wordmark gradient — it IS the partnership signature.</p>
+<h4 id="bgc-owned-bgc-">BGC-owned (<code>--bgc-*</code>)<a class="headerlink" href="#bgc-owned-bgc-" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Hex</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--bgc-coral</code></td>
+<td><code>#F8568D</code></td>
+<td>Gradient mid-stop, BGC-only accents</td>
+</tr>
+<tr>
+<td><code>--bgc-magenta</code></td>
+<td><code>#C026D3</code></td>
+<td>Gradient end-stop, BGC competition badges</td>
+</tr>
+<tr>
+<td><code>--bgc-blush</code></td>
+<td><code>#FFE8F0</code></td>
+<td>Soft surfaces in BGC-themed sections</td>
+</tr>
+</tbody>
+</table>
+<p>Sampled directly from the BGC wordmark gradient (<code>BGC.webp</code>) — not invented.</p>
+<h3 id="42-pillar-colors-pillar-">4.2 Pillar colors (<code>--pillar-*</code>)<a class="headerlink" href="#42-pillar-colors-pillar-" title="Permanent link">¶</a></h3>
+<p>Used only on individual project section pages — see Section 4.</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Hex</th>
+<th>Project</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--pillar-agriculture</code></td>
+<td><code>#16A34A</code> (emerald)</td>
+<td>Smart Agriculture · Sustainability</td>
+</tr>
+<tr>
+<td><code>--pillar-parking</code></td>
+<td><code>#2563EB</code> (royal blue)</td>
+<td>Smart Parking · Mobility</td>
+</tr>
+<tr>
+<td><code>--pillar-safety</code></td>
+<td><code>#DC2626</code> (deep red)</td>
+<td>Smart Safety · Protection</td>
+</tr>
+<tr>
+<td><code>--pillar-temperature</code></td>
+<td><code>#0D9488</code> (teal)</td>
+<td>Smart Temperature · Comfort</td>
+</tr>
+</tbody>
+</table>
+<p>Cool / distinct / culturally meaningful and deliberately outside the warm orange-pink ribbon's hue range.</p>
+<h3 id="43-typography">4.3 Typography<a class="headerlink" href="#43-typography" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Display face:</strong> Inter Tight, weights 800 and 900, with letter-spacing <code>-0.025em</code> to <code>-0.035em</code>. Used for h1 and h2.</li>
+<li><strong>Body face:</strong> Inter, weights 400 (regular) and 600 (semibold). Used for body, h3, h4, links.</li>
+<li><strong>Mono face:</strong> JetBrains Mono (or system fallback). Used for code blocks and inline code.</li>
+<li><strong>Font loading:</strong> single Google Fonts request loading both Inter and Inter Tight in the weights actually used. No additional font requests.</li>
+</ul>
+<h3 id="44-ribbon-usage-rules">4.4 Ribbon usage rules<a class="headerlink" href="#44-ribbon-usage-rules" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>✓ Used for</th>
+<th>✗ Not used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hero headline emphasis line (one phrase only per page)</td>
+<td>Body text</td>
+</tr>
+<tr>
+<td>Primary CTAs (Start Part 1, Begin building, Download)</td>
+<td>Secondary CTAs (those use <code>--flowlence-orange</code> or pillar color)</td>
+</tr>
+<tr>
+<td>Header bottom-border (3px, on every page)</td>
+<td>Navigation links</td>
+</tr>
+<tr>
+<td>Achievement / success cards</td>
+<td>Code blocks</td>
+</tr>
+<tr>
+<td>Numbered-step badges (1, 2, 3 with interpolated stops)</td>
+<td>Wallpaper / large background washes</td>
+</tr>
+<tr>
+<td>Try-it challenge card backgrounds (soft gradient variant)</td>
+<td>Sensor diagrams / wiring photos</td>
+</tr>
+</tbody>
+</table>
+<p>The discipline: a visitor should be able to find the ribbon on a page in &lt;1 second by skim. If gradient is everywhere, it stops meaning anything.</p>
+<hr>
+<h2 id="5-section-2-site-chrome">5. Section 2 · Site chrome<a class="headerlink" href="#5-section-2-site-chrome" title="Permanent link">¶</a></h2>
+<h3 id="51-header">5.1 Header<a class="headerlink" href="#51-header" title="Permanent link">¶</a></h3>
+<p>A single-row header on every page:</p>
+<div class="language-text highlight"><pre><span></span><code>[ bgc | Flowlence Learn ]   [ Home  Getting Started  Smart Agriculture  Smart Parking  Smart Safety  Smart Temperature ]   [ 🔍 Search ] [ ☀️ ]
+</code></pre></div>
+<ul>
+<li><strong>Lockup (left):</strong></li>
+<li>"bgc" wordmark in stylized lowercase italic, 1.5rem, weight 900, with the ribbon gradient applied as a CSS text-clip</li>
+<li>1px vertical divider, 22px tall, color <code>#cbd5e1</code> (light) / <code>#334155</code> (dark)</li>
+<li>"Flowlence Learn" in Inter Tight 800, 1.05rem, slate (light) / cream (dark), letter-spacing <code>-0.02em</code></li>
+<li>Equal vertical weight; both clickable, both link to <code>/</code></li>
+<li><strong>Navigation (center):</strong> flat list of top-level sections, no dropdowns. Active section uses pillar color (when on a project) or slate-bold (Home / Getting Started). Material's <code>navigation.tabs</code> feature drives this.</li>
+<li><strong>Right cluster:</strong> search input, theme toggle. Both use Material's defaults; we restyle to match.</li>
+<li><strong>Bottom border:</strong> 3px tall, full ribbon gradient. Always visible. The partnership signature on every page.</li>
+<li><strong>Background:</strong> white in light mode, slate in dark mode. The ribbon below stays full color regardless of mode.</li>
+</ul>
+<h3 id="52-footer">5.2 Footer<a class="headerlink" href="#52-footer" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Top edge:</strong> 2px ribbon gradient at 40% opacity (softer than the header's), as a transition into the footer.</li>
+<li><strong>Lockup row:</strong> same <code>bgc | Flowlence Learn</code> lockup as the header, slightly smaller (1.25rem/0.95rem).</li>
+<li><strong>Three link columns:</strong> <em>About</em> (Brilliant Global Competitions, Flowlence, Contact), <em>Resources</em> (Download Flowlence Code, Brilliant Smart City Kit, Troubleshooting), <em>For Educators</em> (Become a participating school, Coach materials).</li>
+<li><strong>Copyright row:</strong> "© 2026 Flowlence Inc. · in partnership with Brilliant Global Competitions" + URL. No "Made with Material for MkDocs" attribution.</li>
+</ul>
+<h3 id="53-dark-mode">5.3 Dark mode<a class="headerlink" href="#53-dark-mode" title="Permanent link">¶</a></h3>
+<p>Same structure throughout. Backgrounds switch to <code>--flowlence-slate</code> and <code>#1e293b</code>. Text becomes cream <code>#f1f5f9</code>. Pillar colors keep their hex values (they're already chosen to work on both backgrounds). The ribbon stays at full saturation.</p>
+<hr>
+<h2 id="6-section-3-home-page-hero">6. Section 3 · Home page hero<a class="headerlink" href="#6-section-3-home-page-hero" title="Permanent link">¶</a></h2>
+<h3 id="61-above-the-fold-layout">6.1 Above-the-fold layout<a class="headerlink" href="#61-above-the-fold-layout" title="Permanent link">¶</a></h3>
+<p>Two-column at desktop (60/40 text/image), stacked at &lt;900px viewport. Sits on a soft ribbon-gradient background (<code>--ribbon-gradient-soft</code>).</p>
+<h3 id="62-elements-top-to-bottom-left-column">6.2 Elements top-to-bottom (left column)<a class="headerlink" href="#62-elements-top-to-bottom-left-column" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Competition badge:</strong> <code>⚡ Brilliant Global Competition · 2026–27</code> — pill shape, BGC magenta text on a 8% magenta tint background, magenta border. Always present unless/until the badge content needs to change for Brilliant Academy.</li>
+<li><strong>Headline (two lines):</strong></li>
+<li>Line 1, slate weight 900: <em>"Build a smart city."</em></li>
+<li>Line 2, ribbon gradient text-clip, weight 900: <em>"Block by block."</em></li>
+<li>3.6rem on desktop, scales down at smaller viewports</li>
+<li><strong>Sub-headline:</strong> one paragraph, 1.15rem, slate-medium color. Three concrete promises: "Drag-and-drop programming, real ESP32 hardware, and a competition that spans 4 continents."</li>
+<li><strong>CTAs (two):</strong></li>
+<li>Primary: ribbon-gradient button, "Start Part 1 →"</li>
+<li>Secondary: outlined slate button, "Meet your kit"</li>
+<li><strong>Trust line:</strong> "Grades 10–12 · about 10 hours · no prior coding experience needed", with three orange/coral/magenta dots above.</li>
+</ol>
+<h3 id="63-right-column">6.3 Right column<a class="headerlink" href="#63-right-column" title="Permanent link">¶</a></h3>
+<ul>
+<li>The <code>city-model.png</code> image, displayed in a white frame with subtle shadow, rotated <code>0.8deg</code> for a "polaroid pinned to the page" feel.</li>
+<li>Floating dark-chip caption tag at bottom-right of the image: "What students build", with a small ribbon dot.</li>
+</ul>
+<h3 id="64-below-the-fold-rest-of-home">6.4 Below-the-fold (rest of home)<a class="headerlink" href="#64-below-the-fold-rest-of-home" title="Permanent link">¶</a></h3>
+<p>The home page continues with: 4 project cards (one per pillar, each tinted with its pillar color), the BGC 5-stage journey (Identify → Imagine → Build → Integrate → Impact), what-you-need section, closing CTA. <strong>Detailed designs for these sections are deferred to implementation</strong> — the patterns from Sections 4 and 5 of this spec will guide their treatment.</p>
+<hr>
+<h2 id="7-section-4-project-section-landings">7. Section 4 · Project section landings<a class="headerlink" href="#7-section-4-project-section-landings" title="Permanent link">¶</a></h2>
+<h3 id="71-where-pillar-color-appears-5-redundant-signals">7.1 Where pillar color appears (5 redundant signals)<a class="headerlink" href="#71-where-pillar-color-appears-5-redundant-signals" title="Permanent link">¶</a></h3>
+<p>When a visitor is inside any of the four projects, the corresponding pillar color appears in:</p>
+<ol>
+<li><strong>Top nav active tab.</strong> The active project's tab gets the pillar color text + a 2px bottom border in pillar color.</li>
+<li><strong>Breadcrumb.</strong> The current-section segment uses pillar color text. E.g. <code>Home / 🌿 Smart Agriculture / White LED</code> — "Smart Agriculture" in green.</li>
+<li><strong>Page H1 accent bar.</strong> A 4px-wide × 30px-tall vertical pill in pillar color, sitting to the left of the page-level eyebrow label (<code>SUSTAINABILITY · PILLAR 1 OF 4</code>).</li>
+<li><strong>Sidebar TOC.</strong> Left border of the active section's nested-link list is a 2px line in pillar color. The currently-viewed page in the list has its text in pillar color + bold.</li>
+<li><strong>"Next up" / "What's next?" CTA button.</strong> Stays in pillar color when the next destination is within the same project (so the student visually sees they're staying in the green pillar). Switches to ribbon-gradient when the next destination crosses pillars.</li>
+</ol>
+<h3 id="72-where-pillar-color-does-not-appear">7.2 Where pillar color does NOT appear<a class="headerlink" href="#72-where-pillar-color-does-not-appear" title="Permanent link">¶</a></h3>
+<ul>
+<li>Header chrome (lockup, ribbon line) — stays Flowlence/BGC always</li>
+<li>Body text and code blocks</li>
+<li>Universal callouts (warning, danger, info — these keep their universal colors regardless of pillar)</li>
+<li>Buttons that take students out of the current project</li>
+</ul>
+<h3 id="73-stats-overview-card-on-landing-pages">7.3 Stats / overview card on landing pages<a class="headerlink" href="#73-stats-overview-card-on-landing-pages" title="Permanent link">¶</a></h3>
+<p>Each project landing has a soft-tinted stats card showing time, components, difficulty:</p>
+<div class="language-text highlight"><pre><span></span><code>─────────────────────────────────────────────
+  Time · ~4 hours    Components · 4 sensors + 1 pump    Difficulty · Beginner
+─────────────────────────────────────────────
+</code></pre></div>
+<p>Background uses pillar color at ~6% opacity (e.g. <code>#F0FDF4</code> for Agriculture). 1px border in a slightly darker tint.</p>
+<hr>
+<h2 id="8-section-5-content-page-treatment">8. Section 5 · Content page treatment<a class="headerlink" href="#8-section-5-content-page-treatment" title="Permanent link">¶</a></h2>
+<h3 id="81-typography-vs-current-material-defaults">8.1 Typography (vs current Material defaults)<a class="headerlink" href="#81-typography-vs-current-material-defaults" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Current</th>
+<th>New</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Body text</td>
+<td>~0.85rem, line-height 1.6</td>
+<td>1rem (16px), line-height 1.65</td>
+</tr>
+<tr>
+<td>Lead paragraph</td>
+<td>same as body</td>
+<td>1.08rem, slate-medium color</td>
+</tr>
+<tr>
+<td>h1</td>
+<td>2.5rem, weight 700 (Roboto)</td>
+<td>2.3rem, weight 900 (Inter Tight), letter-spacing <code>-0.025em</code></td>
+</tr>
+<tr>
+<td>h2</td>
+<td>1.6rem, weight 700</td>
+<td>1.4rem, weight 800 (Inter Tight), letter-spacing <code>-0.02em</code></td>
+</tr>
+<tr>
+<td>h3</td>
+<td>1.25rem, weight 700</td>
+<td>1.1rem, weight 700 (Inter), letter-spacing <code>-0.015em</code></td>
+</tr>
+<tr>
+<td>Code blocks</td>
+<td>small, low-contrast default</td>
+<td>larger, slate-on-cream palette (see 8.4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-callouts-admonitions">8.2 Callouts (admonitions)<a class="headerlink" href="#82-callouts-admonitions" title="Permanent link">¶</a></h3>
+<p>Material's admonitions stay as the underlying mechanism but get restyled. <strong>Color logic is by <em>meaning<em>, not by </em>pillar</em></strong> — except for <code>tip</code>, which is friendly and section-owned.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Border-left color</th>
+<th>Icon</th>
+<th>Background tint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tip</code></td>
+<td>pillar color</td>
+<td>💡</td>
+<td>pillar tint at 6%</td>
+</tr>
+<tr>
+<td><code>info</code></td>
+<td>universal blue <code>#2563EB</code></td>
+<td>ℹ️</td>
+<td>blue tint at 6%</td>
+</tr>
+<tr>
+<td><code>warning</code></td>
+<td>universal amber <code>#F59E0B</code></td>
+<td>⚠️</td>
+<td>amber tint at 6%</td>
+</tr>
+<tr>
+<td><code>danger</code></td>
+<td>universal red <code>#DC2626</code></td>
+<td>🚨</td>
+<td>red tint at 6%</td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td>ribbon gradient</td>
+<td>✓</td>
+<td>ribbon-soft gradient</td>
+</tr>
+<tr>
+<td><code>question</code></td>
+<td>(replaced by Try-it card — see 8.5)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>All callouts use 4px left border, 1rem padding, 8px border-radius, with the icon at 1.3rem in the leftmost column.</p>
+<h3 id="83-numbered-steps">8.3 Numbered steps<a class="headerlink" href="#83-numbered-steps" title="Permanent link">¶</a></h3>
+<p>Lists generated by <code>1. 2. 3.</code> markdown become flexbox rows with circle badges:</p>
+<ul>
+<li>30px circle, ribbon-gradient fill (each badge interpolates a different stop along the gradient by step index — step 1 closer to orange, step 5 closer to magenta)</li>
+<li>Step content has 1rem font, line-height 1.6, slate text</li>
+<li>Used for tutorials, wiring instructions, and any procedural sequence</li>
+</ul>
+<h3 id="84-code-blocks">8.4 Code blocks<a class="headerlink" href="#84-code-blocks" title="Permanent link">¶</a></h3>
+<p>Replace Material's default code-block theme with one matching Flowlence Code's editor:</p>
+<ul>
+<li>Background: <code>#0F172A</code> (slate)</li>
+<li>Foreground: <code>#e2e8f0</code> (cream)</li>
+<li>Comments: <code>#94a3b8</code> (muted)</li>
+<li>Keywords: <code>#c084fc</code> (purple)</li>
+<li>Function names: <code>#fbbf24</code> (amber)</li>
+<li>Numbers / literals: <code>#fb923c</code> (orange)</li>
+<li>Top-right language label (e.g. <code>cpp</code>) in muted Inter</li>
+<li>8px border-radius, 1rem padding, subtle shadow</li>
+</ul>
+<p>Inline code stays light-themed: light-gray background, slate text, 4px border-radius.</p>
+<h3 id="85-try-it-challenge-cards">8.5 Try-it challenge cards<a class="headerlink" href="#85-try-it-challenge-cards" title="Permanent link">¶</a></h3>
+<p>Replace <code>!!! question</code> admonitions with distinct gradient cards:</p>
+<ul>
+<li>Background: <code>--ribbon-gradient-soft</code></li>
+<li>Border: 1px transparent + 1px inset ribbon-magenta at 12% opacity</li>
+<li>⚡ icon in a 30px ribbon-gradient circle (top-left)</li>
+<li>Title in Inter Tight 800, 1.05rem</li>
+<li>Body text 0.95rem with <code>&lt;code&gt;</code> styled with semitransparent white background</li>
+</ul>
+<p>Triggered via Material's existing admonition syntax — we just restyle <code>.admonition.question</code>.</p>
+<h3 id="86-right-side-page-toc">8.6 Right-side page TOC<a class="headerlink" href="#86-right-side-page-toc" title="Permanent link">¶</a></h3>
+<p>Material's "On this page" right rail stays. Active section in pillar color + 600 weight, others in slate-medium. 2px left border on the rail in light gray (becomes pillar color where the indicator dot moves).</p>
+<hr>
+<h2 id="9-implementation-approach">9. Implementation approach<a class="headerlink" href="#9-implementation-approach" title="Permanent link">¶</a></h2>
+<h3 id="91-file-structure">9.1 File structure<a class="headerlink" href="#91-file-structure" title="Permanent link">¶</a></h3>
+<div class="language-text highlight"><pre><span></span><code>docs/
+  stylesheets/
+    extra.css                    # token system, palette, type, base overrides
+    chrome.css                   # header + footer
+    home.css                     # home page hero + below
+    pillars.css                  # per-pillar variable scoping + landing styles
+    content.css                  # callouts, numbered steps, try-it, code blocks
+  javascripts/
+    download-toast.js            # (existing, unchanged)
+overrides/
+  partials/
+    header.html                  # custom lockup, ribbon line
+    footer.html                  # 3-column footer with new copy
+    nav.html                     # active-tab pillar coloring (if needed)
+mkdocs.yml                       # add new stylesheets to extra_css
+</code></pre></div>
+<h3 id="92-css-token-system">9.2 CSS token system<a class="headerlink" href="#92-css-token-system" title="Permanent link">¶</a></h3>
+<p>A single <code>:root</code> block at the top of <code>extra.css</code> defines all tokens. Component CSS only references tokens, never raw hex. Light/dark/pillar variants are scoped via class selectors:</p>
+<div class="language-css highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv">--flowlence-orange</span><span class="p">:</span><span class="w"> </span><span class="mh">#F7862F</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--flowlence-cream</span><span class="p">:</span><span class="w"> </span><span class="mh">#FFF7E6</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--flowlence-slate</span><span class="p">:</span><span class="w"> </span><span class="mh">#0F172A</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--bgc-coral</span><span class="p">:</span><span class="w"> </span><span class="mh">#F8568D</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--bgc-magenta</span><span class="p">:</span><span class="w"> </span><span class="mh">#C026D3</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--bgc-blush</span><span class="p">:</span><span class="w"> </span><span class="mh">#FFE8F0</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--ribbon-gradient</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">90</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="mh">#F7862F</span><span class="w"> </span><span class="mi">0</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mh">#F8568D</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mh">#C026D3</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
+<span class="w">  </span><span class="nv">--ribbon-gradient-soft</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">135</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="mh">#FFF7E6</span><span class="w"> </span><span class="mi">0</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mh">#FFFFFF</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mh">#FFE8F0</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
+<span class="w">  </span><span class="nv">--pillar</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--flowlence-orange</span><span class="p">);</span><span class="w">  </span><span class="c">/* default — overridden per pillar */</span>
+<span class="w">  </span><span class="nv">--pillar-tint</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">247</span><span class="p">,</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span><span class="w"> </span><span class="mi">47</span><span class="p">,</span><span class="w"> </span><span class="mf">0.08</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="o">[</span><span class="nt">data-pillar</span><span class="o">=</span><span class="s2">"agriculture"</span><span class="o">]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">--pillar</span><span class="p">:</span><span class="w"> </span><span class="mh">#16A34A</span><span class="p">;</span><span class="w"> </span><span class="nv">--pillar-tint</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">163</span><span class="p">,</span><span class="w"> </span><span class="mi">74</span><span class="p">,</span><span class="w"> </span><span class="mf">0.08</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="o">[</span><span class="nt">data-pillar</span><span class="o">=</span><span class="s2">"parking"</span><span class="o">]</span><span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nv">--pillar</span><span class="p">:</span><span class="w"> </span><span class="mh">#2563EB</span><span class="p">;</span><span class="w"> </span><span class="nv">--pillar-tint</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">37</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w"> </span><span class="mi">235</span><span class="p">,</span><span class="w"> </span><span class="mf">0.08</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="o">[</span><span class="nt">data-pillar</span><span class="o">=</span><span class="s2">"safety"</span><span class="o">]</span><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nv">--pillar</span><span class="p">:</span><span class="w"> </span><span class="mh">#DC2626</span><span class="p">;</span><span class="w"> </span><span class="nv">--pillar-tint</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w"> </span><span class="mf">0.08</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="o">[</span><span class="nt">data-pillar</span><span class="o">=</span><span class="s2">"temperature"</span><span class="o">]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">--pillar</span><span class="p">:</span><span class="w"> </span><span class="mh">#0D9488</span><span class="p">;</span><span class="w"> </span><span class="nv">--pillar-tint</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">148</span><span class="p">,</span><span class="w"> </span><span class="mi">136</span><span class="p">,</span><span class="w"> </span><span class="mf">0.08</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="93-per-page-pillar-tagging">9.3 Per-page pillar tagging<a class="headerlink" href="#93-per-page-pillar-tagging" title="Permanent link">¶</a></h3>
+<p>Each project's pages declare their pillar via Material's front-matter <code>extra</code> block, which gets rendered as a body-level data attribute via a small partial override:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">extra</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pillar</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">agriculture</span>
+<span class="nn">---</span>
+</code></pre></div>
+<p>The override sets <code>&lt;body data-pillar="agriculture"&gt;</code>. CSS selectors then apply pillar-tinted styles globally on that page. Pages without front-matter (Home, Getting Started, Reference) get no pillar attribute and fall back to default tokens.</p>
+<hr>
+<h2 id="10-acceptance-criteria">10. Acceptance criteria<a class="headerlink" href="#10-acceptance-criteria" title="Permanent link">¶</a></h2>
+<p>The redesign is complete when all of the following are true on <code>learn.flowlence.com</code>:</p>
+<ol>
+<li>Header on every page shows the <code>bgc | Flowlence Learn</code> lockup with a ribbon-gradient bottom border.</li>
+<li>Home page hero matches Section 6 exactly — badge, two-line headline (line 2 in gradient), sub-headline, two CTAs, framed city-model image, trust line.</li>
+<li>Each project landing (Smart Agriculture, Smart Parking, Smart Safety, Smart Temperature) shows pillar color in <strong>all 5 places</strong> described in Section 7.1.</li>
+<li>A representative content page (e.g., <code>agriculture/led.md</code>) demonstrates the new typography, callouts, numbered steps, code block style, and Try-it card pattern.</li>
+<li>Dark mode works correctly across all of the above (no unreadable contrasts, ribbon stays vivid).</li>
+<li>Mobile breakpoint (&lt;900px viewport) collapses the hero to single-column and keeps the chrome usable.</li>
+<li><code>mkdocs build</code> produces no warnings.</li>
+<li>Auto-deploy on <code>git push</code> lands the new design at <code>https://learn.flowlence.com</code> within ~45 seconds.</li>
+</ol>
+<hr>
+<h2 id="11-decisions-deferred-to-implementation">11. Decisions deferred to implementation<a class="headerlink" href="#11-decisions-deferred-to-implementation" title="Permanent link">¶</a></h2>
+<p>These are intentionally NOT specified here, to keep the spec focused. They'll be resolved during the implementation plan or as the work proceeds:</p>
+<ul>
+<li>Exact below-the-fold layout of the home page (project cards, 5-stage journey, what-you-need)</li>
+<li>Reference page chrome (the only top-level section with no pillar — likely uses default Flowlence orange accent)</li>
+<li>Exact mobile breakpoints (will tune to actual content widths during build)</li>
+<li>Whether to add page transitions / scroll animations (can layer on later if desired)</li>
+<li>Whether the Brilliant Academy expansion changes the header lockup — likely yes, but defers until that brand exists</li>
+</ul>
+<hr>
+<p><em>End of spec.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  
+<footer class="md-footer flowlence-footer"><div class="flowlence-footer__ribbon" aria-hidden="true"></div>
+
+  <div class="flowlence-footer__inner md-grid"><div class="flowlence-lockup flowlence-footer__brand">
+      <span class="flowlence-lockup__bgc">bgc</span>
+      <span class="flowlence-lockup__divider" aria-hidden="true"></span>
+      <span class="flowlence-lockup__name">Flowlence Learn</span>
+    </div><div class="flowlence-footer__cols">
+      <div class="flowlence-footer__col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="https://bgc.education" target="_blank" rel="noopener">Brilliant Global Competitions ↗</a></li>
+          <li><a href="https://flowlence.com" target="_blank" rel="noopener">Flowlence ↗</a></li>
+          <li><a href="mailto:contact@flowlence.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="flowlence-footer__col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/getting-started/install/">Download Flowlence Code</a></li>
+          <li><a href="/getting-started/meet-your-kit/">Brilliant Smart City Kit</a></li>
+          <li><a href="/reference/troubleshooting/">Troubleshooting</a></li>
+        </ul>
+      </div>
+      <div class="flowlence-footer__col">
+        <h4>For Educators</h4>
+        <ul>
+          <li><a href="https://bgc.education" target="_blank" rel="noopener">Become a participating school ↗</a></li>
+          <li><a href="/reference/">Coach materials</a></li>
+        </ul>
+      </div>
+    </div><div class="flowlence-footer__legal">
+      <span>© 2026 Flowlence Inc. · in partnership with Brilliant Global Competitions</span>
+      <span>learn.flowlence.com</span>
+    </div>
+
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/download-toast.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

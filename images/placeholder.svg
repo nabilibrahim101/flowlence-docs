@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Screenshot pending">
+  <rect width="640" height="360" fill="#f4f4f4" stroke="#d0d0d0" stroke-width="2" stroke-dasharray="8 8"/>
+  <g font-family="-apple-system, Segoe UI, Roboto, sans-serif" text-anchor="middle">
+    <text x="320" y="170" font-size="34" fill="#b0b0b0" font-weight="600">📸 Screenshot pending</text>
+    <text x="320" y="210" font-size="16" fill="#909090">See SCREENSHOTS.md for capture conventions</text>
+  </g>
+</svg>

@@ -1,0 +1,111 @@
+/* ===================================================================
+   extra.css — Misc overrides not covered by other files
+   Most styling has moved to: tokens.css, chrome.css, home.css,
+   pillars.css, content.css. This file is now small on purpose.
+   =================================================================== */
+
+/* ---------- Search bar (keep close to default but tweak background) ---------- */
+.md-search__input {
+  background-color: #f1f5f9;
+  color: var(--flowlence-slate);
+}
+.md-search__input::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
+[data-md-color-scheme="slate"] .md-search__input {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+[data-md-color-scheme="slate"] .md-search__input::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+/* ---------- Header icons ---------- */
+.md-header .md-icon {
+  color: #64748b;
+}
+[data-md-color-scheme="slate"] .md-header .md-icon {
+  color: #cbd5e1;
+}
+
+/* ---------- Download-started toast (existing — preserved) ---------- */
+.flowlence-toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: 380px;
+  padding: 0.85rem 1rem 0.85rem 1.1rem;
+  background: var(--flowlence-orange);
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translateX(calc(100% + 2rem));
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.25s ease-out;
+  z-index: 9999;
+}
+.flowlence-toast--visible { opacity: 1; transform: translateX(0); }
+.flowlence-toast-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1; }
+.flowlence-toast-text { display: flex; flex-direction: column; gap: 0.1rem; }
+.flowlence-toast-text strong { font-weight: 700; }
+.flowlence-toast-close {
+  background: transparent;
+  border: 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  margin-left: 0.25rem;
+  transition: color 0.15s ease-out;
+}
+.flowlence-toast-close:hover { color: #ffffff; }
+
+@media (max-width: 480px) {
+  .flowlence-toast {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    max-width: none;
+    transform: translateY(-150%);
+  }
+  .flowlence-toast--visible { transform: translateY(0); }
+}
+
+/* ---------- Disabled Material button (visible but non-interactive) ----------
+   Used on the Download button while the installer is being finalized.
+   Force a true greyscale palette (not a faded brand color) so the button
+   reads as obviously inactive rather than just "tinted". */
+.md-button.md-button--disabled,
+.md-button.md-button--disabled:hover,
+.md-button.md-button--disabled:focus {
+  background: #cbd5e1 !important;
+  color: #64748b !important;
+  border-color: #cbd5e1 !important;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none !important;
+  filter: none;
+  opacity: 1;
+}
+.md-button.md-button--disabled .twemoji svg {
+  fill: #64748b;
+}
+[data-md-color-scheme="slate"] .md-button.md-button--disabled,
+[data-md-color-scheme="slate"] .md-button.md-button--disabled:hover,
+[data-md-color-scheme="slate"] .md-button.md-button--disabled:focus {
+  background: #334155 !important;
+  color: #94a3b8 !important;
+  border-color: #334155 !important;
+}
+[data-md-color-scheme="slate"] .md-button.md-button--disabled .twemoji svg {
+  fill: #94a3b8;
+}

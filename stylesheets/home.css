@@ -1,0 +1,222 @@
+/* ===================================================================
+   home.css — Home page hero + below-the-fold treatments
+   Spec ref: §6
+   Scoped via .flowlence-home-* class — only applies on the index page.
+   =================================================================== */
+
+/* Hide the page H1 ("Welcome to Flowlence Learn") since the hero replaces it */
+.flowlence-home .md-typeset > h1:first-of-type {
+  display: none;
+}
+
+/* ---------- Hero container ---------- */
+.flowlence-hero {
+  background: var(--ribbon-gradient-soft);
+  margin: -1.5rem -1rem 2.5rem;
+  padding: 2.25rem 2rem 2rem;
+  border-radius: 0;
+}
+
+/* Single-column hero: every hero element stacks as a direct flex child.
+   Order in the markdown = vertical order on screen. Centered text + items. */
+.flowlence-hero__grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .flowlence-hero__grid {
+    gap: 1.25rem;
+  }
+}
+
+/* ---------- Competition badge ---------- */
+.flowlence-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(192, 38, 211, 0.08);
+  border: 1px solid rgba(192, 38, 211, 0.2);
+  margin-bottom: 1.4rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bgc-magenta);
+}
+
+/* ---------- Headline ----------
+   Prefixed with `.md-typeset` to beat the `.md-typeset h1` rules in
+   content.css (specificity 0,2,0 > 0,1,1). Without the prefix, Material's
+   default h1 sizing/margin would win and these hero overrides would silently
+   no-op. */
+.md-typeset .flowlence-hero__headline {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--flowlence-slate);
+  margin: 0;
+}
+[data-md-color-scheme="slate"] .md-typeset .flowlence-hero__headline {
+  color: #f1f5f9;
+}
+/* The gradient half (line 2) — pulled tight against line 1 by negating
+   the parent grid's flex gap. Without this, "Build a smart city." and
+   "Block by block." had ~24px of empty space between them. */
+.md-typeset .flowlence-hero__headline--gradient {
+  margin: -1.4rem 0 0;
+  background: var(--ribbon-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 600px) {
+  .md-typeset .flowlence-hero__headline { font-size: 2.2rem; }
+  .md-typeset .flowlence-hero__headline--gradient { font-size: 2.2rem; margin-top: -1rem; }
+}
+
+/* ---------- Sub-headline ---------- */
+.flowlence-hero__sub {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0 auto 0.5rem;
+  max-width: 920px;   /* wider — uses more of the hero's horizontal space */
+}
+[data-md-color-scheme="slate"] .flowlence-hero__sub {
+  color: #cbd5e1;
+}
+
+/* ---------- CTAs ---------- */
+.flowlence-hero__ctas {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;   /* center the buttons inside the centered text column */
+}
+
+.flowlence-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.flowlence-cta--primary {
+  background: var(--ribbon-gradient);
+  color: #fff !important;
+  box-shadow: 0 4px 14px rgba(248, 86, 141, 0.35);
+}
+.flowlence-cta--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(248, 86, 141, 0.45);
+}
+.flowlence-cta--secondary {
+  background: #fff;
+  color: var(--flowlence-slate) !important;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+}
+.flowlence-cta--secondary:hover {
+  border-color: var(--flowlence-slate);
+}
+[data-md-color-scheme="slate"] .flowlence-cta--secondary {
+  background: #1e293b;
+  color: #f1f5f9 !important;
+  border-color: #334155;
+}
+
+/* ---------- Trust line ---------- */
+.flowlence-hero__trust {
+  margin-top: 0;   /* grid gap handles spacing now */
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* match centered hero column */
+  gap: 0.7rem;
+  font-size: 0.82rem;
+  color: #475569;   /* a11y: darkened from #64748b → #475569 for better contrast on cream bg */
+}
+[data-md-color-scheme="slate"] .flowlence-hero__trust {
+  color: #94a3b8;   /* dark-mode contrast on slate hero bg */
+}
+.flowlence-hero__dots {
+  display: inline-flex;
+}
+.flowlence-hero__dots span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.flowlence-hero__dots span:nth-child(1) { background: var(--flowlence-orange); }
+.flowlence-hero__dots span:nth-child(2) { background: var(--bgc-coral); margin-left: -8px; }
+.flowlence-hero__dots span:nth-child(3) { background: var(--bgc-magenta); margin-left: -8px; }
+
+/* ---------- City model image frame ---------- */
+.flowlence-hero__image {
+  position: relative;
+  width: 100%;
+  max-width: 640px;   /* keeps image readable in single-column layout */
+}
+.flowlence-hero__image-frame {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.10);
+  transform: rotate(0.8deg);
+}
+.flowlence-hero__image-frame img {
+  width: 100%;
+  display: block;
+}
+.flowlence-hero__image-tag {
+  position: absolute;
+  bottom: -12px;
+  right: 14px;
+  background: var(--flowlence-slate);
+  color: #fff;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.flowlence-hero__image-tag::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ribbon-gradient);
+}
+
+/* ---------- Mobile hero ---------- */
+@media (max-width: 600px) {
+  .flowlence-hero { padding: 2rem 1.25rem; }
+  .flowlence-hero__sub { font-size: 1rem; }
+  .flowlence-cta { padding: 0.7rem 1.1rem; font-size: 0.9rem; }
+  .flowlence-hero__image-frame { transform: rotate(0); }  /* drop the tilt on small screens */
+}

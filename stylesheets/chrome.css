@@ -1,0 +1,217 @@
+/* ===================================================================
+   chrome.css — Header lockup + ribbon line + footer
+   Spec ref: §5
+   =================================================================== */
+
+/* ---------- Header background (light + dark) ---------- */
+.md-header {
+  background-color: #ffffff;
+  color: var(--flowlence-slate);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+[data-md-color-scheme="slate"] .md-header {
+  background-color: var(--flowlence-slate);
+  color: #f1f5f9;
+}
+
+/* ---------- The lockup (bgc | Flowlence Learn) ---------- */
+.flowlence-lockup {
+  display: flex !important;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+/* The "bgc" stylized mark */
+.flowlence-lockup__bgc {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: -0.05em;
+  background: var(--ribbon-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+
+/* The vertical divider */
+.flowlence-lockup__divider {
+  display: inline-block;
+  width: 1px;
+  height: 22px;
+  background: #cbd5e1;
+}
+[data-md-color-scheme="slate"] .flowlence-lockup__divider {
+  background: #334155;
+}
+
+/* "Flowlence Learn" wordmark */
+.flowlence-lockup__name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  color: var(--flowlence-slate);
+}
+[data-md-color-scheme="slate"] .flowlence-lockup__name {
+  color: #f1f5f9;
+}
+
+/* ---------- The 3px ribbon line under the header ---------- */
+.flowlence-ribbon-line {
+  height: 3px;
+  background: var(--ribbon-gradient);
+}
+
+/* ===================================================================
+   Footer (continues from chrome.css above)
+   =================================================================== */
+
+.flowlence-footer {
+  background: #FAFAF8;
+  color: var(--flowlence-slate);
+  padding: 0;
+  margin-top: 3rem;
+}
+[data-md-color-scheme="slate"] .flowlence-footer {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+.flowlence-footer__ribbon {
+  height: 2px;
+  background: var(--ribbon-gradient);
+  opacity: 0.4;
+}
+
+.flowlence-footer__inner {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.flowlence-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.95rem;
+}
+.flowlence-footer__brand .flowlence-lockup__bgc { font-size: 1.25rem; }
+
+.flowlence-footer__cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.flowlence-footer__col h4 {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin: 0 0 0.5rem;
+}
+[data-md-color-scheme="slate"] .flowlence-footer__col h4 {
+  color: #94a3b8;
+}
+
+.flowlence-footer__col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.flowlence-footer__col a {
+  color: #334155;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.15s ease;
+}
+.flowlence-footer__col a:hover {
+  color: var(--flowlence-orange);
+}
+[data-md-color-scheme="slate"] .flowlence-footer__col a {
+  color: #cbd5e1;
+}
+[data-md-color-scheme="slate"] .flowlence-footer__col a:hover {
+  color: var(--flowlence-orange-light);
+}
+
+.flowlence-footer__legal {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: #64748b;
+}
+[data-md-color-scheme="slate"] .flowlence-footer__legal {
+  border-top-color: #334155;
+  color: #94a3b8;
+}
+
+/* ---------- Mobile chrome adjustments ---------- */
+@media (max-width: 600px) {
+  .flowlence-lockup__bgc { font-size: 1.2rem; }
+  .flowlence-lockup__name { font-size: 0.9rem; }
+  .flowlence-lockup__divider { height: 18px; }
+  .flowlence-footer__inner { padding: 1.5rem 1rem; }
+  .flowlence-footer__cols { grid-template-columns: 1fr; gap: 1rem; }
+  .flowlence-footer__legal { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------- Top nav tabs row · white instead of orange ---------- */
+/* The ribbon gradient line ABOVE the tabs (in the header) stays — see .flowlence-ribbon-line.
+   Only the .md-tabs row itself becomes white in light mode, slate in dark mode. */
+.md-tabs {
+  background-color: #ffffff;
+  color: var(--flowlence-slate);
+  border-bottom: 1px solid #e2e8f0;
+}
+.md-tabs__link {
+  color: #475569;
+  opacity: 1;
+}
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--flowlence-orange);
+  font-weight: 700;
+  opacity: 1;
+}
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: var(--flowlence-slate);
+  border-bottom-color: #334155;
+}
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: #cbd5e1;
+}
+[data-md-color-scheme="slate"] .md-tabs__link--active,
+[data-md-color-scheme="slate"] .md-tabs__link:hover {
+  color: var(--flowlence-orange-light);
+}
+
+/* ---------- Left sidebar nav · slightly larger font ---------- */
+.md-nav__link {
+  font-size: 0.85rem;  /* up from Material's ~0.7rem default — easier to read */
+}
+.md-nav__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

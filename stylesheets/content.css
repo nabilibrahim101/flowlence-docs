@@ -1,0 +1,264 @@
+/* ===================================================================
+   content.css — Inside-of-page treatments
+   Spec ref: §8
+   Typography (8.1), callouts (8.2), numbered steps (8.3), Try-it (8.5)
+   =================================================================== */
+
+/* ---------- 8.1 Typography — moderate scale, closer to Material default ---------- */
+.md-typeset {
+  font-size: 0.9rem;         /* was 1rem; closer to Material's 0.85rem default */
+  line-height: 1.65;
+}
+
+/* The first paragraph after the H1 — slightly larger as a "lead" */
+.md-typeset h1 + p {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #334155;
+}
+[data-md-color-scheme="slate"] .md-typeset h1 + p {
+  color: #cbd5e1;
+}
+
+.md-typeset h1 { font-size: 1.9rem; }
+.md-typeset h2 { font-size: 1.25rem; margin-top: 1.8rem; }
+.md-typeset h3 { font-size: 1rem; margin-top: 1.4rem; }
+
+/* ---------- 8.2 Callouts (admonitions) ---------- */
+/* Material's admonition selector: .admonition.<type> */
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 8px;
+  border-left-width: 4px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* TIP — uses pillar color (or Flowlence orange when no pillar) */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-left-color: var(--pillar);
+  background-color: var(--pillar-light);
+}
+.md-typeset .admonition.tip > .admonition-title,
+.md-typeset details.tip > summary {
+  background-color: transparent;
+  color: var(--pillar);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.md-typeset .admonition.tip > .admonition-title::before,
+.md-typeset details.tip > summary::before {
+  background-color: var(--pillar);
+}
+
+/* INFO — universal blue */
+.md-typeset .admonition.info,
+.md-typeset details.info {
+  border-left-color: #2563EB;
+  background-color: rgba(37, 99, 235, 0.06);
+}
+.md-typeset .admonition.info > .admonition-title,
+.md-typeset details.info > summary {
+  color: #2563EB;
+}
+
+/* WARNING — universal amber */
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-left-color: #F59E0B;
+  background-color: rgba(245, 158, 11, 0.06);
+}
+.md-typeset .admonition.warning > .admonition-title,
+.md-typeset details.warning > summary {
+  color: #B45309;
+}
+
+/* DANGER — universal red */
+.md-typeset .admonition.danger,
+.md-typeset details.danger {
+  border-left-color: #DC2626;
+  background-color: rgba(220, 38, 38, 0.06);
+}
+.md-typeset .admonition.danger > .admonition-title,
+.md-typeset details.danger > summary {
+  color: #DC2626;
+}
+
+/* SUCCESS — ribbon gradient */
+.md-typeset .admonition.success,
+.md-typeset details.success {
+  border-left: 0;
+  border-radius: 8px;
+  background: var(--ribbon-gradient-soft);
+  border: 1px solid rgba(248, 86, 141, 0.15);
+}
+.md-typeset .admonition.success > .admonition-title,
+.md-typeset details.success > summary {
+  color: var(--bgc-magenta);
+}
+
+/* ---------- 8.3 Numbered steps ---------- */
+/* Markdown ordered lists become flexbox rows with ribbon-gradient circle badges */
+.md-typeset ol.flowlence-steps {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  counter-reset: step-counter;
+}
+.md-typeset ol.flowlence-steps > li {
+  counter-increment: step-counter;
+  display: flex;
+  gap: 0.95rem;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+  padding-left: 0;
+}
+.md-typeset ol.flowlence-steps > li::before {
+  content: counter(step-counter);
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--ribbon-gradient);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(192, 38, 211, 0.3);
+}
+
+/* ---------- 8.5 Try-it challenge cards ---------- */
+/* "!!! question" admonitions become gradient cards */
+.md-typeset .admonition.question,
+.md-typeset details.question {
+  background: var(--ribbon-gradient-soft);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  box-shadow: 0 0 0 1px rgba(248, 86, 141, 0.12) inset;
+}
+.md-typeset .admonition.question > .admonition-title,
+.md-typeset details.question > summary {
+  background-color: transparent;
+  color: var(--flowlence-slate);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  padding-left: 2.1rem;
+}
+.md-typeset .admonition.question > .admonition-title::before,
+.md-typeset details.question > summary::before {
+  content: "⚡";
+  background: var(--ribbon-gradient);
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0.6rem;
+  top: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  -webkit-mask: none;
+  mask: none;
+}
+
+/* ===================================================================
+   8.4 Code blocks — Flowlence Code editor palette
+   Slate background + cream text + amber/purple/orange syntax highlights
+   =================================================================== */
+
+.md-typeset pre,
+.md-typeset .highlight pre,
+.md-typeset code.highlight,
+.md-typeset .highlighttable .highlight pre {
+  background-color: var(--flowlence-slate) !important;
+  color: #e2e8f0 !important;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+/* Comments */
+.md-typeset .highlight .c, .md-typeset .highlight .c1, .md-typeset .highlight .cm { color: #94a3b8 !important; }
+
+/* Keywords */
+.md-typeset .highlight .k, .md-typeset .highlight .kn, .md-typeset .highlight .kd { color: #c084fc !important; }
+
+/* Function/method names */
+.md-typeset .highlight .nf, .md-typeset .highlight .nb { color: #fbbf24 !important; }
+
+/* Numbers + literals */
+.md-typeset .highlight .mi, .md-typeset .highlight .mf, .md-typeset .highlight .mh { color: #fb923c !important; }
+
+/* Strings */
+.md-typeset .highlight .s, .md-typeset .highlight .s1, .md-typeset .highlight .s2 { color: #86efac !important; }
+
+/* Inline code stays light */
+.md-typeset code:not(pre > code) {
+  background-color: #f1f5f9;
+  color: var(--flowlence-slate);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+[data-md-color-scheme="slate"] .md-typeset code:not(pre > code) {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+/* ===================================================================
+   Dark mode adjustments — keep coherence with the slate scheme
+   =================================================================== */
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.tip,
+[data-md-color-scheme="slate"] .md-typeset details.tip {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.info,
+[data-md-color-scheme="slate"] .md-typeset details.info {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.warning,
+[data-md-color-scheme="slate"] .md-typeset details.warning {
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.danger,
+[data-md-color-scheme="slate"] .md-typeset details.danger {
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.question,
+[data-md-color-scheme="slate"] .md-typeset details.question {
+  background: linear-gradient(135deg, rgba(247, 134, 47, 0.08) 0%, rgba(248, 86, 141, 0.08) 50%, rgba(192, 38, 211, 0.08) 100%);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.success,
+[data-md-color-scheme="slate"] .md-typeset details.success {
+  background: linear-gradient(135deg, rgba(247, 134, 47, 0.08) 0%, rgba(248, 86, 141, 0.08) 50%, rgba(192, 38, 211, 0.08) 100%);
+  border-color: rgba(248, 86, 141, 0.25);
+}
+
+/* Keep code-block contrast — already dark, but check inline code */
+[data-md-color-scheme="slate"] .flowlence-hero {
+  background: linear-gradient(135deg, rgba(255, 247, 230, 0.05) 0%, rgba(30, 41, 59, 1) 50%, rgba(255, 232, 240, 0.08) 100%);
+}
